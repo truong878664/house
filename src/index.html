@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>House | clone</title>
+    <link rel="stylesheet" href="/public/style.css" />
+    <link
+      rel="shortcut icon"
+      href="../public/img/logo-nav.webp"
+      type="image/x-icon"
+    />
+    <!-- icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- end icon -->
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Trispace:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- end font -->
+  </head>
+
+  <body class="bg-c-black text-white">
+    <!-- HEADER BOTTOM -->
+    <header>
+      <div
+        class="min-h-[90px] w-full fixed left-0 bottom-0 z-50 bg-white text-c-black [&.active]:text-white [&.active]:bg-c-pink flex justify-between items-center px-5 group/header active"
+      >
+        <a class="/">
+          <img
+            class="w-1/2 hidden group-[.active]/header:block"
+            src="../public/img/logo-nav.webp"
+            alt=""
+          />
+          <img
+            class="w-1/2 group-[.active]/header:hidden"
+            src="../public/img/logo-hh.webp"
+            alt=""
+          />
+        </a>
+        <!-- nav -->
+        <input
+          class="peer/nav-input"
+          type="checkbox"
+          name=""
+          id="nav-input"
+          hidden
+        />
+
+        <label
+          for="nav-input"
+          class="text-sm peer-checked/nav-input:rotate-180 transition-transform"
+        >
+          <i class="fa-solid fa-angle-up"></i>
+        </label>
+        <ul
+          class="absolute bottom-full left-0 w-full flex-col gap-3 uppercase py-7 px-5 font-bold bg-white group-[.active]/header:bg-gradient-to-t from-c-pink to-white hidden peer-checked/nav-input:flex"
+        >
+          <li
+            class="[&.active]:text-c-yellow hover:text-c-pink group-[.active]/header:hover:text-c-yellow text-end"
+          >
+            Unreal aestate
+          </li>
+          <li
+            class="[&.active]:text-c-pink hover:text-c-pink group-[.active]/header:hover:text-c-yellow text-end"
+          >
+            Lore
+          </li>
+          <li
+            class="[&.active]:text-c-pink hover:text-c-pink group-[.active]/header:hover:text-c-yellow text-end"
+          >
+            Dnae
+          </li>
+          <li
+            class="[&.active]:text-c-pink hover:text-c-pink group-[.active]/header:hover:text-c-yellow text-end"
+          >
+            The quaest
+          </li>
+          <li
+            class="[&.active]:text-c-pink hover:text-c-pink group-[.active]/header:hover:text-c-yellow text-end"
+          >
+            Team
+          </li>
+          <li
+            class="text-start hover:text-c-pink group-[.active]/header:hover:text-c-yellow text-xl"
+          >
+            <i class="fa-brands fa-twitter"></i>
+          </li>
+          <li
+            class="text-start hover:text-c-pink group-[.active]/header:hover:text-c-yellow text-xl"
+          >
+            <i class="fa-brands fa-discord"></i>
+          </li>
+        </ul>
+        <!-- end nav -->
+      </div>
+    </header>
+    <!-- END HEADER BOTTOM -->
+
+    <!-- WELCOME -->
+    <section>
+      <div
+        class="w-full bg-cover h-fit pb-24 bg-bottom relative overflow-hidden"
+        style="background-image: url(../public/img/bg/hero-background.webp)"
+      >
+        <div class="flex justify-center pt-12 relative">
+          <!-- video -->
+          <div class="relative">
+            <div class="relative z-[1]">
+              <!-- sticker top -->
+              <div class="absolute top-0 w-full">
+                <div
+                  class="w-6/12 float-right translate-x-1/2 -translate-y-1/2"
+                >
+                  <img src="../public/img/stiker/hero-top-right.webp" alt="" />
+                </div>
+                <div
+                  class="w-6/12 float-left -translate-x-1/2 -translate-y-1/2 -rotate-[25deg]"
+                >
+                  <img
+                    src="../public/img/stiker/hero-bottom-left.webp"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <!-- end sticker top -->
+              <video
+                class="w-[60vw] rounded-3xl shadow-video min-h-[20vw] bg-c-pink"
+                id="video-welcome"
+                src="../public/video/welcome.mp4"
+              ></video>
+              <!-- action video -->
+              <div
+                class="absolute left-0 bottom-3 px-5 w-full flex justify-between"
+              >
+                <button
+                  class="active:rotate-[90deg] active:text-c-pink transition-transform"
+                  id="reload-video-welcome-btn"
+                >
+                  <i class="fa-solid fa-rotate-right"></i>
+                </button>
+                <button
+                  data-action="pause"
+                  id="action-video-welcome-btn"
+                  class="group/play-btn text-cente w-5 h-5 flex justify-center items-center"
+                >
+                  <span
+                    class="block group-data-[action='play']/play-btn:hidden"
+                  >
+                    <i class="fa-solid fa-play"></i>
+                  </span>
+                  <span
+                    class="hidden group-data-[action='play']/play-btn:block group-data-[action='play']/play-btn:text-c-pink"
+                  >
+                    <i class="fa-solid fa-pause"></i>
+                  </span>
+                </button>
+                <script>
+                  const video = document.getElementById("video-welcome");
+                  const playBtn = document.getElementById("action-video-welcome-btn");
+                  const reloadBtn = document.getElementById("reload-video-welcome-btn");
+
+                  playBtn.onclick = e => {
+                    const action = playBtn.dataset.action;
+                    playBtn.dataset.action = action === 'pause' ? 'play' : 'pause' 
+                    action === "pause" ? video.play() : video.pause()
+                  };
+
+                  reloadBtn.onclick = e => {
+                    video.currentTime = 0;
+                    video.play();
+                    playBtn.dataset.action = 'play'
+                  }
+
+                </script>
+              </div>
+              <!-- end action video -->
+            </div>
+
+            <!-- sticker bottom -->
+            <div class="absolute bottom-0 w-full">
+              <div
+                class="w-6/12 absolute bottom-0 right-0 translate-x-2/3 -rotate-45 translate-y-1/2"
+              >
+                <img
+                  class=""
+                  src="../public/img/stiker/hero-bottom-left-cozy.webp"
+                  alt=""
+                />
+              </div>
+              <div
+                class="w-4/12 absolute bottom-0 left-0 -translate-x-1/2 translate-y-1/2"
+              >
+                <img
+                  class=""
+                  src="../public/img/stiker/hero-bottom-right-top.webp"
+                  alt=""
+                />
+              </div>
+            </div>
+            <!-- end sticker bottom -->
+          </div>
+          <!-- end video -->
+        </div>
+      </div>
+      <!-- about -->
+      <div class="w-full relative">
+        <!-- sticker end bottom -->
+        <div
+          class="absolute top-0 left-0 w-full -translate-y-1/2 overflow-hidden"
+        >
+          <div class="w-5/12 float-right translate-x-1/4">
+            <img
+              class="h-full object-contain origin-center"
+              src="../public/img/stiker/hero-bottom-right-bottom.webp"
+              alt=""
+            />
+          </div>
+          <div class="w-4/12 float-left -translate-x-1/3 translate-y-1/2">
+            <img
+              class="h-full object-contain origin-center"
+              src="../public/img/stiker/hero-bottom-left-cozy.webp"
+              alt=""
+            />
+          </div>
+        </div>
+        <!-- end sticker end bottom  -->
+
+        <div class="w-full absolute -z-10 -translate-y-[20%]">
+          <img class="" src="../public/img/bg/yellow-bg.webp" alt="" />
+        </div>
+        <div class="relative">
+          <!-- text welcome -->
+          <div class="-mt-8 top-0 lg:px-[10vw] z-10 container mx-auto px-4">
+            <div class="">
+              <img src="../public/img/wellcome/welcome-text.webp" alt="" />
+            </div>
+            <div class="">
+              <img src="../public/img/wellcome/welcome-text-2.webp" alt="" />
+            </div>
+          </div>
+          <!-- end text welcome -->
+
+          <!-- paragraph welcome -->
+          <div
+            class="container mx-auto px-4 text-center text-c-pink text-sm mt-12 mb-24"
+          >
+            <p class="mb-2">
+              The first
+              <span class="font-bold"
+                >interdimensional digital collectibles</span
+              >
+              coming from the parallel world of
+              <span class="font-bold">Aeterna.</span>
+            </p>
+            <p>
+              Become an Aeterna Landlord and take part in the greatest
+              multiverse adventure ever.
+            </p>
+          </div>
+          <!-- end paragraph welcome -->
+          <!-- parallax -->
+          <div class="w-full h-40 relative mb-32">
+            <div class="absolute left-1/2 h-full -translate-x-1/2 pt-20">
+              <img
+                src="../public/img/stiker/parallax-circle-front.webp"
+                alt=""
+              />
+            </div>
+            <div class="absolute left-[6%] animate-horBounce-1">
+              <img
+                class="w-20 h-20 rotate-[30deg]"
+                src="../public/img/stiker/parallax-rock-1.webp"
+                alt=""
+              />
+            </div>
+
+            <div class="absolute left-[40%] animate-verBounce-1">
+              <img
+                class="w-24 h-24 rotate-[130deg]"
+                src="../public/img/stiker/parallax-rock-1.webp"
+                alt=""
+              />
+            </div>
+
+            <div class="absolute left-[35%] top-10 animate-verBounce-2">
+              <img
+                class="w-14 h-14 rotate"
+                src="../public/img/stiker/parallax-rock-1.webp"
+                alt=""
+              />
+            </div>
+
+            <div class="absolute left-[60%] -bottom-5 animate-horBounce-2">
+              <img
+                class="w-14 h-14 mt-10"
+                src="../public/img/stiker/parallax-rock-1.webp"
+                alt=""
+              />
+            </div>
+
+            <div class="absolute left-[80%] animate-rotateBounce">
+              <img
+                class="w-10 h-10"
+                src="../public/img/stiker/parallax-rock-1.webp"
+                alt=""
+              />
+            </div>
+          </div>
+          <!-- end parallax -->
+        </div>
+      </div>
+      <!-- end about -->
+    </section>
+    <!-- END WELCOME -->
+    <!-- CHAPTER -->
+    <section></section>
+    <!-- END CHAPTER -->
+
+    <footer class="h-screen w-full bg-white"></footer>
+  </body>
+</html>
