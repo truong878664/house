@@ -3,13 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>House | clone</title>
+    <title>House</title>
     <link rel="stylesheet" href="/public/css/style.css" />
+    <!-- favicon -->
     <link
       rel="shortcut icon"
       href="../public/img/logo-nav.webp"
       type="image/x-icon"
     />
+    <!-- end favicon -->
     <!-- icon -->
     <link
       rel="stylesheet"
@@ -28,8 +30,7 @@
     />
     <!-- end font -->
   </head>
-
-  <body class="bg-c-black text-white">
+  <body>
     <!-- HEADER BOTTOM -->
     <header>
       <div
@@ -62,6 +63,7 @@
         >
           <i class="fa-solid fa-angle-up"></i>
         </label>
+        <label for="nav-input" class="fixed left-0 right-0 bottom-0 top-0 z-[-10] hidden peer-checked/nav-input:block"></label>
         <ul
           class="absolute bottom-full left-0 w-full flex-col gap-3 uppercase py-7 px-5 font-bold bg-white group-[.active]/header:bg-gradient-to-t from-c-pink to-white hidden peer-checked/nav-input:flex"
         >
@@ -140,14 +142,29 @@
               ></video>
               <!-- action video -->
               <div
-                class="absolute left-0 bottom-3 px-5 w-full flex justify-between"
+                class="absolute left-0 text-sm bottom-3 px-5 w-full flex justify-between"
               >
-                <button
-                  class="active:rotate-[90deg] active:text-c-pink transition-transform"
-                  id="reload-video-welcome-btn"
-                >
-                  <i class="fa-solid fa-rotate-right"></i>
-                </button>
+                <div class="flex gap-4">
+                  <button
+                    class="active:rotate-[90deg] active:text-c-pink transition-transform"
+                    id="reload-video-welcome-btn"
+                  >
+                    <i class="fa-solid fa-rotate-right"></i>
+                  </button>
+
+                  <button
+                    data-volume="on"
+                    class="group/volume flex justify-center items-center hover:text-c-pink"
+                    id="volume-video-welcome-btn"
+                  >
+                    <span class="hidden group-data-[volume='on']/volume:block">
+                      <i class="fa-solid fa-volume-high"></i>
+                    </span>
+                    <span class="block group-data-[volume='on']/volume:hidden">
+                      <i class="fa-solid fa-volume-xmark"></i>
+                    </span>
+                  </button>
+                </div>
                 <button
                   data-action="pause"
                   id="action-video-welcome-btn"
@@ -166,21 +183,35 @@
                 </button>
                 <script>
                   const video = document.getElementById("video-welcome");
-                  const playBtn = document.getElementById("action-video-welcome-btn");
-                  const reloadBtn = document.getElementById("reload-video-welcome-btn");
+                  const playBtn = document.getElementById(
+                    "action-video-welcome-btn"
+                  );
+                  const volumeBtn = document.getElementById(
+                    "volume-video-welcome-btn"
+                  );
+                  const reloadBtn = document.getElementById(
+                    "reload-video-welcome-btn"
+                  );
 
-                  playBtn.onclick = e => {
+                  playBtn.onclick = (e) => {
                     const action = playBtn.dataset.action;
-                    playBtn.dataset.action = action === 'pause' ? 'play' : 'pause' 
-                    action === "pause" ? video.play() : video.pause()
+                    playBtn.dataset.action =
+                      action === "pause" ? "play" : "pause";
+                    action === "pause" ? video.play() : video.pause();
                   };
 
-                  reloadBtn.onclick = e => {
+                  reloadBtn.onclick = (e) => {
                     video.currentTime = 0;
                     video.play();
-                    playBtn.dataset.action = 'play'
-                  }
+                    playBtn.dataset.action = "play";
+                  };
 
+                  volumeBtn.onclick = () => {
+                    const currentStatusVolume = volumeBtn.dataset.volume;
+                    video.volume = currentStatusVolume === "off" ? 1 : 0;
+                    volumeBtn.dataset.volume =
+                      currentStatusVolume === "off" ? "on" : "off";
+                  };
                 </script>
               </div>
               <!-- end action video -->
@@ -269,8 +300,8 @@
           </div>
           <!-- end paragraph welcome -->
           <!-- parallax -->
-          <div class="w-full h-40 relative mb-32">
-            <div class="absolute left-1/2 h-full -translate-x-1/2 pt-20">
+          <div class="w-full h-20 relative mb-44">
+            <div class="absolute left-1/2 h-full w-40 -translate-x-1/2 pt-20">
               <img
                 src="../public/img/stiker/parallax-circle-front.webp"
                 alt=""
@@ -322,10 +353,584 @@
       <!-- end about -->
     </section>
     <!-- END WELCOME -->
+
     <!-- CHAPTER -->
-    <section></section>
+    <section>
+      <div class="px-4">
+        <!-- HEAD CHAPTER -->
+        <div class="flex items-center mb-6">
+          <span class="text-3xl font-bold">LORE</span>
+          <div class="ml-7">
+            <div class="flex gap-6 items-center opacity-80">
+              <label
+                data-label-chapter="1"
+                class="label-chapter block [&.active]:bg-c-pink [&.active]:w-2 [&.active]:h-2 w-1 h-1 active bg-stone-500 rounded-full transition-all origin-center"
+              ></label>
+              <label
+                data-label-chapter="2"
+                class="label-chapter block [&.active]:bg-c-pink [&.active]:w-2 [&.active]:h-2 w-1 h-1 bg-stone-500 rounded-full transition-all origin-center"
+              ></label>
+              <label
+                data-label-chapter="3"
+                class="label-chapter block [&.active]:bg-c-pink [&.active]:w-2 [&.active]:h-2 w-1 h-1 bg-stone-500 rounded-full transition-all origin-center"
+              ></label>
+            </div>
+          </div>
+        </div>
+        <!-- END HEAD CHAPTER -->
+        <!-- CONTENT CHAPTER -->
+        <div class="w-full mb-6 relative">
+          <!-- action move chapter -->
+          <div
+            class="absolute top-0 right-0 flex text-2xl gap-6 mt-2 mr-4 text-stone-300 opacity-50 z-[1]"
+            id="move-chapter-wrapper"
+          >
+            <button data-direction="left" class="flex items-center">
+              <i class="fa-solid fa-angles-left"></i>
+            </button>
+            <button data-direction="right" class="flex items-center">
+              <i class="fa-solid fa-angles-right"></i>
+            </button>
+          </div>
+          <!-- end action move chapter -->
+          <input
+            name="chapter"
+            id="chapter1"
+            type="radio"
+            data-chapter="1"
+            class="peer/chapter1"
+            checked
+            hidden
+          />
+          <input
+            name="chapter"
+            id="chapter2"
+            type="radio"
+            data-chapter="2"
+            class="peer/chapter2"
+            hidden
+          />
+          <input
+            name="chapter"
+            id="chapter3"
+            type="radio"
+            data-chapter="3"
+            class="peer/chapter3"
+            hidden
+          />
+          <!-- chapter 1 -->
+          <div class="h-[584px] overflow-hidden group/chapter">
+            <div
+              class="peer-checked/chapter1:group-[]/chapter:translate-y-0 peer-checked/chapter2:group-[]/chapter:-translate-y-[584px] peer-checked/chapter3:group-[]/chapter:-translate-y-[1168px] transition-all duration-1000"
+            >
+              <div class="text-sm h-[584px]">
+                <h4 class="text-4xl font-bold mb-6">Chapter 1</h4>
+                <div>
+                  <p>
+                    <b>380 million years ago</b>, Earth experienced the first
+                    interdimensional split in history. Following a major
+                    sliding-doors event, a parallel world was born. A planet
+                    which was very similar, but also completely different, from
+                    its human twin. Its name was <b>Aeterna</b>.
+                  </p>
+                  <br />
+                  <p>
+                    <b>
+                      It all began with a primordial fish making love with an
+                      underwater cave
+                    </b>
+                    <br />
+                    On this parallel world, our progenitors did not evolve
+                    towards hominids, but astonishing combos of humans, building
+                    and trees. They eventually became <b>Househaeds</b>,
+                    intelligent creatures with a strong bond with nature and a
+                    deep sense of community.
+                  </p>
+                  <br />
+                  <p>
+                    <b>Their history is a mess</b>. Following the bizarre laws
+                    of interdimensional science, what happened in our world
+                    happened also on Aeterna, but in a mashed up way. Through
+                    bad and good times, Househaeds never waged war among each
+                    other. All the disputes are settled by the most prominent
+                    members of their society.
+                  </p>
+                </div>
+              </div>
+              <!-- end chapter 1 -->
+              <!-- chapter 2   -->
+              <div class="text-sm h-[584px]">
+                <h4 class="text-4xl font-bold mb-6">Chapter 2</h4>
+                <div class="">
+                  <p>
+                    <b>Interdimensional voyage came at a high price.</b>,
+                    <br />
+                    In the human year 1492 AD, as Earth was experiencing the
+                    discovery of America, on Aeterna a Househaed called Moebius
+                    found a way to reach parallel worlds. But before Househaeds
+                    managed to get full control on the process, many of them,
+                    although warned by
+                    <b>the Elders</b>, fell trapped in a space-time distortion
+                    called <b>The Limbo</b>, a dead-end recess in the structure
+                    of the multiverse.
+                  </p>
+                  <br />
+                  <p>
+                    Since then, nobody has managed to set them free. But there
+                    is a hope. And this hope is humanity.
+                  </p>
+                  <br />
+                  <p>
+                    <b>Today,</b> <br />Unreal Aestate, the first
+                    interdimensional real estate company in the multiverse, has
+                    come to offer a unique chance to buy Househaeds on the
+                    parallel world of Aeterna. And to involve humanity in its
+                    first interdimensional adventure ever.
+                  </p>
+                </div>
+              </div>
+              <!-- end chapter 2 -->
+
+              <!-- chapter 3 -->
+              <div class="text-sm h-[584px]">
+                <h4 class="text-4xl font-bold mb-6">Chapter 3</h4>
+                <div>
+                  <p>
+                    <b
+                      >For humans, this is not only a big opportunity in the
+                      artistic digital collectibles market, but also a way to
+                      change Aeterna’s fate.
+                    </b>
+                    <br />As Aeterna scientists recently found, humans share the
+                    same genetic heritage of Househaeds. This means that
+                    together, Househaeds and humans can finally have a chance to
+                    release the long-trapped Househaeds from Limbo.
+                  </p>
+                  <br />
+                  <p>
+                    The scientific process behind this is very confusing and
+                    boring, as it belongs to interdimensional studies. But to
+                    make it immediate, funny and rewarding, Unreal Aestate has
+                    turned it into
+                    <b
+                      >The Quaest, a legendary mission every Househaed’s owner
+                      is entitled to join.</b
+                    >
+                  </p>
+                </div>
+              </div>
+              <!-- end chapter 3 -->
+            </div>
+          </div>
+          <!-- END CONTENT CHAPTER -->
+          <div class="group/image relative">
+            <div
+              class="hidden opacity-0 peer-checked/chapter1:group-[]/image:opacity-100 peer-checked/chapter1:group-[]/image:block transition-[opacity] duration-1000"
+            >
+              <img src="../public/img/chapter/Chapter1.webp" alt="" />
+            </div>
+            <div
+              class="hidden opacity-0 peer-checked/chapter2:group-[]/image:opacity-100 peer-checked/chapter2:group-[]/image:block transition-[opacity] duration-1000"
+            >
+              <img src="../public/img/chapter/Chapter2.webp" alt="" />
+            </div>
+            <div
+              class="hidden opacity-0 peer-checked/chapter3:group-[]/image:opacity-100 peer-checked/chapter3:group-[]/image:block transition-[opacity] duration-1000"
+            >
+              <img src="../public/img/chapter/Chapter3.webp" alt="" />
+            </div>
+          </div>
+          <!-- IMAGE CHAPTER -->
+        </div>
+        <!-- END IMAGE CHAPTER -->
+      </div>
+      <script>
+        const moveChapterWrapper = document.getElementById(
+          "move-chapter-wrapper"
+        );
+        const inputsChapter = document.querySelectorAll("input[name=chapter]");
+        let currentChapter = 1;
+        const NUMBER_CHAPTER = 3;
+
+        moveChapterWrapper.onclick = (e) => {
+          const moveBtn = e.target.closest("button");
+          if (!moveBtn) {
+            return;
+          }
+          const direction = moveBtn.dataset.direction;
+          currentChapter += direction === "right" ? 1 : -1;
+          currentChapter =
+            ((currentChapter - 1 + NUMBER_CHAPTER) % NUMBER_CHAPTER) + 1;
+          const currentChapterActiveElement = document.querySelector(
+            `input[name='chapter'][data-chapter='${currentChapter}']`
+          );
+          document.querySelector(`[for='chapter${currentChapter}']`);
+          document
+            .querySelector(".label-chapter.active")
+            .classList.remove("active");
+          const labelChapterActive = document
+            .querySelector(`[data-label-chapter='${currentChapter}']`)
+            .classList.add("active");
+          currentChapterActiveElement.checked = true;
+        };
+      </script>
+    </section>
     <!-- END CHAPTER -->
 
-    <footer class="h-screen w-full bg-white"></footer>
+    <!-- COMING SOON  -->
+    <section>
+      <div class="w-full overflow-x-hidden mt-44">
+        <div class="">
+          <!-- paragraph coming soon -->
+          <div class="pb-10 px-4">
+            <h4 class="text-4xl font-bold mb-6">DNAE: Details and Rarities</h4>
+            <div class="text-sm font-extralight">
+              <p class="">
+                Hand-drawn art pieces by David Sossella, HouseHaeds are
+                programmatically generated from 7 different types of buildings
+                (Houses), including color palette as well as structural
+                variations within each building style, for a total of 19
+                different base characters. On top of that, there are over 220
+                unique traits distributed on 9 separate layers for a total
+                amount of potential combinations in the order of hundreds of
+                billions. Literally.
+              </p>
+              <br />
+              <p class="">
+                The result is a very diverse collection with so many levels of
+                collectability, where each NFT not only has its own personality,
+                but it also truly looks and feels like a one of a kind.
+              </p>
+              <br />
+              <p class="">
+                The rarity of their features reflects the seven steps of their
+                society: Common|Uncommon|Rare|Epic|Legendary|Mythic|1:1. Some of
+                the rarest Househaeds are still trapped in Limbo, making them a
+                real endangered species.
+              </p>
+            </div>
+          </div>
+          <!-- end paragraph coming soon -->
+          <!-- image coming soon -->
+          <div class="w-full px-12 pt-20 relative">
+            <div
+              class="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-bl from-black via-black to-c-pink opacity-30"
+            ></div>
+            <div
+              class="absolute top-0 left-0 right-0 bottom-0 bg-black-op-40 z-10 flex justify-center items-center"
+            >
+              <div class="uppercase flex flex-col items-center">
+                <span class="text-[5vw] tracking-[0.3rem] font-extralight"
+                  >coming</span
+                >
+                <span class="text-[6vw] font-bold tracking-wide">soon</span>
+              </div>
+            </div>
+            <div class="">
+              <div class="opacity-30 relative">
+                <img src="../public/img/Reveal.webp" alt="" />
+                <div class="absolute bottom-0 left-0 text-2xl p-8">
+                  <span class="block">*** Hand:</span>
+                  <span class="block">12%</span>
+                </div>
+              </div>
+              <div class="flex flex-col px-6">
+                <span class="my-4">Other in this NFT</span>
+                <hr />
+                <ul class="mt-4 mb-8 flex flex-wrap">
+                  <li class="flex flex-col my-2 w-1/2">
+                    <span>Body:</span>
+                    <span>9%</span>
+                  </li>
+                  <li class="flex flex-col my-2 w-1/2">
+                    <span>Building:</span>
+                    <span>36%</span>
+                  </li>
+                  <li class="flex flex-col my-2 w-1/2">
+                    <span>Eyes:</span>
+                    <span>58%</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- end image coming soon -->
+        </div>
+      </div>
+    </section>
+    <!-- END COMING SOON  -->
+
+    <!-- PANNER COMING SOON -->
+    <section>
+      <div
+        class="w-full bg-cover mt-20 bg-top flex flex-col items-center"
+        style="background-image: url(../public/img/bg/game-bg.webp)"
+      >
+        <div class="mb-10">
+          <img src="../public/img/bg/game-bg-2.webp" alt="" />
+        </div>
+        <div class="my-10">
+          <button
+            class="z-[2] relative group/comingsoon-btn hover:text-c-pink hover:font-bold"
+          >
+            <div
+              class="absolute top-4 -left-4 -z-[1] group-hover/comingsoon-btn:top-0 group-hover/comingsoon-btn:left-0 transition-all duration-500 group-hover/comingsoon-btn:opacity-0"
+            >
+              <img src="../public/img/comingsoon/btn-bg-back.svg" alt="" />
+            </div>
+            <span
+              class="absolute block left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+              >Coming Soon</span
+            >
+            <div class="">
+              <img src="../public/img/comingsoon/btn-bg.svg" alt="" />
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- END PANNER COMING SOON -->
+
+    <!-- TEAM -->
+    <section>
+      <div class="mt-20 p-4">
+        <span class="text-6xl font-bold">Team</span>
+        <!-- FOUNDERS -->
+        <div class="">
+          <span class="text-2xl font-bold uppercase mt-10 mb-4 block"
+            >Founders</span
+          >
+          <div class="w-full flex overflow-x-auto">
+            <!-- team item -->
+            <div class="flex flex-col items-center p-4 shrink-0">
+              <div class="w-24 h-24 rounded-full">
+                <img
+                  class="w-full h-full object-cover rounded-full"
+                  src="../public/img/team/Sappy.jpg"
+                  alt=""
+                />
+              </div>
+              <span class="block uppercase mb-2 mt-4 font-bold">James</span>
+              <span class="block capitalize font-extralight">
+                Business strategy
+              </span>
+            </div>
+            <!-- end team item -->
+            <!-- team item -->
+            <div class="flex flex-col items-center p-4 shrink-0">
+              <div class="w-24 h-24 rounded-full">
+                <img
+                  class="w-full h-full object-cover rounded-full"
+                  src="../public/img/team/Martini.jpg"
+                  alt=""
+                />
+              </div>
+              <span class="block uppercase mb-2 mt-4 font-bold">Macca</span>
+              <span class="block capitalize font-extralight"> Operations </span>
+            </div>
+            <!-- end team item -->
+          </div>
+        </div>
+        <!-- END FOUNDERS -->
+        <!-- CREATIVE TEAM  -->
+        <div class="">
+          <span class="text-2xl font-bold uppercase mt-10 mb-4 block"
+            >Creative team</span
+          >
+          <div class="w-full flex overflow-x-auto">
+            <!-- team item -->
+            <div class="flex flex-col items-center p-4 shrink-0">
+              <div class="w-24 h-24 rounded-full">
+                <img
+                  class="w-full h-full object-cover rounded-full"
+                  src="../public/img/team/Paulo.jpg"
+                  alt=""
+                />
+              </div>
+              <span class="block uppercase mb-2 mt-4 font-bold">Lio</span>
+              <span class="block capitalize font-extralight">
+                creative dir.
+              </span>
+            </div>
+            <!-- end team item -->
+            <!-- team item -->
+            <div class="flex flex-col items-center p-4 shrink-0">
+              <div class="w-24 h-24 rounded-full">
+                <img
+                  class="w-full h-full object-cover rounded-full"
+                  src="../public/img/team/Martini.jpg"
+                  alt=""
+                />
+              </div>
+              <span class="block uppercase mb-2 mt-4 font-bold">Jimmy</span>
+              <span class="block capitalize font-extralight">
+                Create dir.
+              </span>
+            </div>
+            <!-- end team item -->
+
+            <!-- team item -->
+            <div class="flex flex-col items-center p-4 shrink-0">
+              <div class="w-24 h-24 rounded-full">
+                <img
+                  class="w-full h-full object-cover rounded-full"
+                  src="../public/img/team/Paulo.jpg"
+                  alt=""
+                />
+              </div>
+              <span class="block uppercase mb-2 mt-4 font-bold">David</span>
+              <span class="block capitalize font-extralight">
+                Lead Illustrator
+              </span>
+            </div>
+            <!-- end team item -->
+            <!-- team item -->
+            <div class="flex flex-col items-center p-4 shrink-0">
+              <div class="w-24 h-24 rounded-full">
+                <img
+                  class="w-full h-full object-cover rounded-full"
+                  src="../public/img/team/Grim.jpg"
+                  alt=""
+                />
+              </div>
+              <span class="block uppercase mb-2 mt-4 font-bold">Sara</span>
+              <span class="block capitalize font-extralight">
+                Illustrator
+              </span>
+            </div>
+            <!-- end team item -->
+          </div>
+        </div>
+        <!-- END CREATIVE TEAM -->
+
+        <!-- DEVELOPMENT TEAM  -->
+        <div class="">
+          <span class="text-2xl font-bold uppercase mt-10 mb-4 block"
+            >Development team</span
+          >
+          <div class="w-full flex overflow-x-auto">
+            <!-- team item -->
+            <div class="flex flex-col items-center p-4 shrink-0">
+              <div class="w-24 h-24 rounded-full">
+                <img
+                  class="w-full h-full object-cover rounded-full"
+                  src="../public/img/team/Sappy.jpg"
+                  alt=""
+                />
+              </div>
+              <span class="block uppercase mb-2 mt-4 font-bold">Antis</span>
+              <span class="block capitalize font-extralight"> Lead dev. </span>
+            </div>
+            <!-- end team item -->
+            <!-- team item -->
+            <div class="flex flex-col items-center p-4 shrink-0">
+              <div class="w-24 h-24 rounded-full">
+                <img
+                  class="w-full h-full object-cover rounded-full"
+                  src="../public/img/team/Grim.jpg"
+                  alt=""
+                />
+              </div>
+              <span class="block uppercase mb-2 mt-4 font-bold">Jimmy</span>
+              <span class="block capitalize font-extralight">
+                Development
+              </span>
+            </div>
+            <!-- end team item -->
+
+            <!-- team item -->
+            <div class="flex flex-col items-center p-4 shrink-0">
+              <div class="w-24 h-24 rounded-full">
+                <img
+                  class="w-full h-full object-cover rounded-full"
+                  src="../public/img/team/Paulo.jpg"
+                  alt=""
+                />
+              </div>
+              <span class="block uppercase mb-2 mt-4 font-bold">David</span>
+              <span class="block capitalize font-extralight">
+                Development
+              </span>
+            </div>
+            <!-- end team item -->
+          </div>
+        </div>
+        <!-- END CREATIVE TEAM -->
+
+        <!-- DEVELOPMENT TEAM  -->
+        <div class="">
+          <span class="text-2xl font-bold uppercase mt-10 mb-4 block"
+            >Copyist</span
+          >
+          <div class="w-full flex overflow-x-auto">
+            <!-- team item -->
+            <div class="flex flex-col items-center p-4 shrink-0">
+              <div class="w-24 h-24 rounded-full">
+                <img
+                  class="w-full h-full object-cover rounded-full"
+                  src="../public/img/team/truong.jpg"
+                  alt=""
+                />
+              </div>
+              <span class="block uppercase mb-2 mt-4 font-bold"
+                >Quoc truong</span
+              >
+              <span class="block capitalize font-extralight">Copyist </span>
+            </div>
+            <!-- end team item -->
+          </div>
+        </div>
+        <!-- END CREATIVE TEAM -->
+      </div>
+    </section>
+    <!-- END TEAM -->
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="w-full mt-20">
+        <!-- footer top -->
+        <div class="mb- h-72 w-full">
+          <img
+            class="w-full h-full"
+            src="../public/img/footer-top.webp"
+            alt=""
+          />
+        </div>
+        <!-- end footer top -->
+        <!-- footer middle -->
+        <div class="p-4">
+          <div class="">
+            <img class="" src="../public/img/logo.webp" alt="" />
+            <ul class="flex gap-10 text-xl mt-10">
+              <li class="hover:text-c-pink">
+                <i class="fa-brands fa-twitter"></i>
+              </li>
+              <li class="hover:text-c-pink">
+                <i class="fa-brands fa-discord"></i>
+              </li>
+            </ul>
+          </div>
+          <div class="">
+            <img src="../public/img/footer-hand.webp" alt="" />
+          </div>
+        </div>
+        <!-- end footer middle -->
+        <!-- footer bottom -->
+        <div class="p-4">
+          <hr class="border-stone-400" />
+          <div class="">
+            <div class="flex justify-between py-4">
+              <span class="hover:text-c-pink">Privacy Policy</span>
+              <span class="hover:text-c-pink pr-4">Terms of Use</span>
+            </div>
+            <div class="">
+              <span>©Aeterna Labs, Inc. All right reserved</span>
+            </div>
+          </div>
+        </div>
+        <!-- end footer bottom -->
+      </div>
+    </footer>
+    <!-- END FOOTER -->
   </body>
 </html>
