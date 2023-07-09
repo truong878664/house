@@ -8,6 +8,8 @@ body {
 html {
   font-family: "Trispace", sans-serif;
   -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  scroll-behavior: smooth;
 }
 
 /* width */

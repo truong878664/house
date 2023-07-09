@@ -22,6 +22,17 @@ module.exports = {
           "0%": { transform: "rotate(0deg)" },
           "100%": { transform: "rotate(180deg)" },
         },
+        scroll: {
+          "0%": { transform: "translateY(0px)" },
+          "100%": { transform: "translateY(-100%)" },
+        },
+        vibrate: {
+          "0%, 100%" : {transform: "rotate(0)"},
+          "5%, 15%": {transform: "rotate(20deg)"},
+          "10%, 20%": {transform: "rotate(-20deg)"},
+          "30%": {transform: "rotate(0)"}
+          
+         }
       },
       animation: {
         "horBounce-1": "horBounce 8s linear infinite",
@@ -29,6 +40,8 @@ module.exports = {
         "verBounce-1": "verBounce 10s linear infinite",
         "verBounce-2": "verBounce 16s linear infinite",
         rotateBounce: "rotateBounce 8s linear infinite",
+        scroll: "scroll 3s linear infinite",
+        vibrate: "vibrate 2s ease infinite"
       },
     },
     colors: {
