@@ -76,7 +76,9 @@
             data-title="unreal-aestate"
             class="[&.active]:text-c-yellow hover:text-c-pink group-[.active]/header:hover:text-c-yellow text-end cursor-pointer md:mr-1"
           >
-            <a href="#unreal-aestate"> Unreal aestate </a>
+            <label for="nav-input">
+              <a href="#unreal-aestate"> Unreal aestate </a>
+            </label>
           </li>
           <li
             data-title="lore"
@@ -114,11 +116,55 @@
             <i class="fa-brands fa-discord"></i>
           </li>
         </ul>
+
         <!-- end nav -->
       </div>
     </header>
     <!-- END HEADER BOTTOM -->
-
+    <!-- NAV LEFT -->
+    <nav>
+      <ul
+        data-title="navbar-line"
+        class="fixed top-0 left-0 bottom-0 w-16 z-10 mb-24 justify-center hidden md:flex flex-col gap-10 items-center"
+      >
+        <li class="px-1 group">
+          <a
+            href="#unreal-aestate"
+            data-title="unreal-aestate"
+            class="bg-white h-10 block w-[2px] rounded-full [&.active]:bg-c-pink [&.active]:h-20 transition-all active group-hover:w-[6px] active"
+          ></a>
+        </li>
+        <li class="px-2 group">
+          <a
+            href="#lore"
+            data-title="lore"
+            class="bg-white h-10 block w-[2px] rounded-full [&.active]:bg-c-pink [&.active]:h-20 transition-all group-hover:w-[6px]"
+          ></a>
+        </li>
+        <li class="px-2 group">
+          <a
+            href="#dnae"
+            data-title="dnae"
+            class="bg-white h-10 block w-[2px] rounded-full [&.active]:bg-c-pink [&.active]:h-20 transition-all group-hover:w-[6px]"
+          ></a>
+        </li>
+        <li class="px-2 group">
+          <a
+            href="#the-quaest"
+            data-title="the-quaest"
+            class="bg-white h-10 block w-[2px] rounded-full [&.active]:bg-c-pink [&.active]:h-20 transition-all group-hover:w-[6px]"
+          ></a>
+        </li>
+        <li class="px-2 group">
+          <a
+            href="#team"
+            data-title="team"
+            class="bg-white h-10 block w-[2px] rounded-full [&.active]:bg-c-pink [&.active]:h-20 transition-all group-hover:w-[6px]"
+          ></a>
+        </li>
+      </ul>
+    </nav>
+    <!-- END NAV LEFT -->
     <!-- WELCOME -->
     <section id="unreal-aestate">
       <div
@@ -135,12 +181,13 @@
                 <div
                   class="w-6/12 float-right translate-x-1/2 -translate-y-1/2"
                 >
-                  <img src="../public/img/stiker/hero-top-right.webp" alt="" />
+                  <img src="../public/img/stiker/hero-top-right.webp" alt="" class="animate-rotate3d-y"/>
                 </div>
                 <div
                   class="w-6/12 float-left -translate-x-1/2 -translate-y-1/2 -rotate-[25deg]"
                 >
                   <img
+                    class="animate-show-center "
                     src="../public/img/stiker/hero-bottom-left.webp"
                     alt=""
                   />
@@ -198,21 +245,21 @@
             </div>
 
             <!-- sticker bottom -->
-            <div class="absolute bottom-0 w-full z-[1]">
+            <div class="absolute bottom-0 w-full z-[1] h-20">
               <div
                 class="w-6/12 absolute bottom-0 right-0 translate-x-3/4 -rotate-45 translate-y-1/2"
               >
                 <img
-                  class=""
+                  class="animate-rotate3d-x"
                   src="../public/img/stiker/hero-bottom-left-cozy.webp"
                   alt=""
                 />
               </div>
               <div
-                class="w-4/12 absolute bottom-0 left-0 -translate-x-1/2 translate-y-1/2"
+                class="w-4/12 absolute bottom-0 left-0 -translate-x-1/2 translate-y-1/2 lg:w-2/12 lg:-translate-x-[80%] lg:translate-y-1/3"
               >
                 <img
-                  class="animate-vibrate"
+                  class="animate-show-center-vibrate"
                   src="../public/img/stiker/hero-bottom-right-top.webp"
                   alt=""
                 />
@@ -224,7 +271,7 @@
         </div>
       </div>
       <!-- about -->
-      <div class="w-full relative">
+      <div class="w-full relative pb-20">
         <!-- sticker end bottom -->
         <div
           class="absolute top-0 left-0 w-full -translate-y-1/2 overflow-hidden"
@@ -258,16 +305,36 @@
             </div>
           </div>
           <!-- end text welcome -->
+          <!-- sticker paragraph -->
+          <div
+            class="absolute w-full h-full left-0 top-0 -z-[1] overflow-hidden"
+          >
+            <div class="absolute left-0 top-1/3 w-[20vw] animate-horBounce-1s">
+              <img
+                src="../public/img/wellcome/welcome-left-center.webp"
+                alt=""
+              />
+            </div>
+            <div
+              class="absolute right-0 top-1/3 w-[20vw] animate-horBounce-700ms"
+            >
+              <img src="../public/img/wellcome/welcome.webp" alt="" />
+            </div>
+            <div class="absolute -right-64 top-0 -z-[1]">
+              <img src="../public/img/wellcome/welcome-right.webp" alt="" />
+            </div>
+          </div>
+          <!-- end sticker paragraph -->
 
           <!-- paragraph welcome -->
           <div
-            class="container mx-auto px-4 text-center text-c-pink text-sm mt-12 mb-24 md:text-xl lg:mt-10 lg:mb-40 lg:px-[15vw]"
+            class="container relative mx-auto px-4 text-center text-c-pink text-sm mt-12 mb-24 md:text-xl lg:mt-10 lg:mb-40 lg:px-[15vw]"
           >
             <p class="mb-2">
               The first
-              <span class="font-bold"
-                >interdimensional digital collectibles</span
-              >
+              <span class="font-bold">
+                interdimensional digital collectibles
+              </span>
               coming from the parallel world of
               <span class="font-bold">Aeterna.</span>
             </p>
@@ -278,7 +345,7 @@
           </div>
           <!-- end paragraph welcome -->
           <!-- parallax -->
-          <div class="w-full relative mb-20">
+          <div class="w-full relative">
             <div
               class="h-40 w-40 md:w-72 md:h-72 md:pt-0 lg:w-96 lg:h-96 mx-auto"
             >
@@ -330,7 +397,11 @@
             </div>
             <!-- bg yellow -->
             <div class="w-full absolute -z-10 translate-y-[5%] bottom-0">
-              <img class="" src="../public/img/bg/yellow-bg.webp" alt="" />
+              <img
+                class="w-full"
+                src="../public/img/bg/yellow-bg.webp"
+                alt=""
+              />
             </div>
             <!-- end bg yellow -->
           </div>
@@ -343,7 +414,7 @@
 
     <!-- CHAPTER -->
     <section id="lore">
-      <div class="px-4 md:px-32">
+      <div class="px-4 md:px-32 mt-10 lg:h-screen">
         <!-- HEAD CHAPTER -->
         <div class="flex items-center mb-6">
           <span class="text-3xl font-bold mb-6 lg:text-[3vw] lg:mb-10"
@@ -374,10 +445,19 @@
             id="move-chapter-wrapper"
           >
             <button data-direction="left" class="flex items-center">
-              <i class="fa-solid fa-angles-left"></i>
+              <!-- <i class="fa-solid fa-angles-left"></i> -->
+              <img
+                src="../public/img/chapter/chapter-arrow-left.svg"
+                alt=""
+                class="rotate-90"
+              />
             </button>
             <button data-direction="right" class="flex items-center">
-              <i class="fa-solid fa-angles-right"></i>
+              <img
+                src="../public/img/chapter/chapter-arrow-left.svg"
+                alt=""
+                class="-rotate-90"
+              />
             </button>
           </div>
           <!-- end action move chapter -->
@@ -729,7 +809,7 @@
         </div>
         <div class="my-10">
           <button
-            class="z-[2] relative group/comingsoon-btn hover:text-c-pink hover:font-bold"
+            class="z-[2] relative group/comingsoon-btn hover:text-c-pink hover:font-bold animate-vibrate-2"
           >
             <div
               class="absolute top-4 -left-4 -z-[1] group-hover/comingsoon-btn:top-0 group-hover/comingsoon-btn:left-0 transition-all duration-500 group-hover/comingsoon-btn:opacity-0"
@@ -983,10 +1063,14 @@
           <!-- footer bottom -->
           <div class="p-4 w-11/12 mx-auto" id="footer-end">
             <hr class="border-stone-400" />
-            <div class="">
-              <div class="flex justify-between py-4">
-                <span class="hover:text-c-pink">Privacy Policy</span>
-                <span class="hover:text-c-pink pr-4">Terms of Use</span>
+            <div class="lg:flex lg:justify-between lg:items-center">
+              <div class="flex justify-between py-4 gap-24">
+                <span class="hover:text-c-pink cursor-not-allowed"
+                  >Privacy Policy</span
+                >
+                <span class="hover:text-c-pink pr-4 cursor-not-allowed"
+                  >Terms of Use</span
+                >
               </div>
               <div class="">
                 <span>©Aeterna Labs, Inc. All right reserved</span>
@@ -998,7 +1082,6 @@
       </div>
     </footer>
     <!-- END FOOTER -->
-
     <script>
       const header = document.getElementById("header");
       const video = document.getElementById("video-welcome");
@@ -1009,7 +1092,7 @@
       handleVideo();
       hiddenHeaderWhenEnd();
       changeThemeHeaderWhenOutWelcome();
-      activeNavbarHeader();
+      activeNavbar();
 
       // ACTION VIDEO
       function handleVideo() {
@@ -1054,11 +1137,20 @@
         }
         intersection({ element: pageWelcome, callback: handle });
       }
-      function activeNavbarHeader() {
+      function activeNavbar() {
         const sections = document.querySelectorAll("section");
         const navbar = document.querySelector("[data-title='navbar']");
+        const navbarLine = document.querySelector("[data-title='navbar-line']");
 
         function handle(entry) {
+          if (entry.target.id === "lore") {
+            if (entry.isIntersecting) {
+              console.log("lore show");
+            } else {
+              console.log("lore hidden");
+            }
+          }
+
           if (entry.isIntersecting) {
             navbar
               .querySelector(`[data-title].active`)
@@ -1066,8 +1158,18 @@
             navbar
               .querySelector(`[data-title='${entry.target.id}']`)
               .classList.add("active");
+
+            navbarLine
+              .querySelector(`[data-title].active`)
+              ?.classList.remove("active");
+            navbarLine
+              .querySelector(`[data-title='${entry.target.id}']`)
+              .classList.add("active");
           } else {
             navbar
+              .querySelector(`[data-title='${entry.target.id}']`)
+              .classList.remove("active");
+            navbarLine
               .querySelector(`[data-title='${entry.target.id}']`)
               .classList.remove("active");
           }
