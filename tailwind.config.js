@@ -47,7 +47,8 @@ module.exports = {
           "100%": { transform: "rotateX(00deg)" },
         },
         "show-center": {
-          "0%": {
+          "0%, 40%": { transform: "scale(0%)", opacity: "0%" },
+          "50%": {
             transform: "scale(50%)",
             opacity: "0%",
           },

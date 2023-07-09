@@ -59,3 +59,93 @@ div::-webkit-scrollbar-thumb {
 div::-webkit-scrollbar-thumb:hover {
   background-color: #555;
 }
+
+[data-effect] {
+  transition: all;
+  /* transition-duration: 700ms;
+  transition-delay: 0; */
+}
+
+[data-effect="rotateX"] {
+  transform: rotateX(90deg);
+}
+
+[data-effect="rotateX"].show {
+  transform: rotateX(0deg);
+}
+
+[data-effect="rotateY"] {
+  transform: rotateY(90deg);
+}
+
+[data-effect="rotateY"].show {
+  transform: rotateY(0deg);
+}
+
+[data-effect="show-zoom"] {
+  transform: scale(130%);
+  opacity: 0%;
+}
+
+[data-effect="show-zoom"].show {
+  transform: scale(100%);
+  opacity: 100%;
+}
+
+[data-effect="show"] {
+  opacity: 0%;
+}
+
+[data-effect="show"].show {
+  opacity: 100%;
+}
+
+[data-effect="move-b"] {
+  transform: translateY(100%);
+  opacity: 50%;
+}
+
+[data-effect="move-b"].show {
+  transform: translateY(0px);
+  opacity: 100%;
+}
+
+[data-effect="move-t"] {
+  transform: translateY(-100%);
+  opacity: 0%;
+}
+
+[data-effect="move-t"].show {
+  transform: translateY(0px);
+  opacity: 100%;
+}
+
+[data-effect="move-l"] {
+  transform: translateX(-50%);
+  opacity: 0%;
+}
+
+[data-effect="move-l"].show {
+  transform: translateX(0px);
+  opacity: 100%;
+}
+
+[data-effect="move-r"] {
+  transform: translateX(50%);
+  opacity: 0%;
+}
+
+[data-effect="move-r"].show {
+  transform: translateX(0px);
+  opacity: 100%;
+}
+
+[data-effect="move-rt"] {
+  transform: translateY(-50%) scale(0);
+  opacity: 0%;
+}
+
+[data-effect="move-rt"].show {
+  transform: translateY(0px) scale(100%);
+  opacity: 100%;
+}
