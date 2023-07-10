@@ -34,9 +34,10 @@
     <!-- HEADER BOTTOM -->
     <header>
       <div
-        class="min-h-[90px] w-full fixed left-0 bottom-0 z-50 bg-white text-c-black [&.active]:text-white [&.active]:bg-c-pink flex justify-between items-center px-5 group/header active"
+        id="header"
+        class="min-h-[90px] w-full fixed left-0 bottom-0 z-50 bg-white text-c-black [&.active]:text-white [&.active]:bg-c-pink flex justify-between items-center px-5 group/header md:flex md:justify-between active"
       >
-        <a class="/">
+        <a class="" href="#">
           <img
             class="w-1/2 hidden group-[.active]/header:block"
             src="../public/img/logo-nav.webp"
@@ -59,7 +60,7 @@
 
         <label
           for="nav-input"
-          class="text-sm peer-checked/nav-input:rotate-180 transition-transform"
+          class="text-sm peer-checked/nav-input:rotate-180 transition-transform md:hidden"
         >
           <i class="fa-solid fa-angle-up"></i>
         </label>
@@ -68,70 +69,129 @@
           class="fixed left-0 right-0 bottom-0 top-0 z-[-10] hidden peer-checked/nav-input:block"
         ></label>
         <ul
-          class="absolute bottom-full left-0 w-full flex-col gap-3 uppercase py-7 px-5 font-bold bg-white group-[.active]/header:bg-gradient-to-t from-c-pink to-white hidden peer-checked/nav-input:flex"
+          data-title="navbar"
+          class="absolute bottom-full left-0 w-full flex-col gap-3 uppercase py-7 px-5 font-bold bg-white group-[.active]/header:bg-gradient-to-t from-c-pink to-white hidden peer-checked/nav-input:flex md:flex md:flex-row md:relative md:from-transparent md:to-transparent md:bg-transparent md:justify-end"
         >
           <li
-            class="[&.active]:text-c-yellow hover:text-c-pink group-[.active]/header:hover:text-c-yellow text-end"
+            data-title="unreal-aestate"
+            class="[&.active]:text-c-yellow hover:text-c-pink group-[.active]/header:hover:text-c-yellow text-end cursor-pointer md:mr-1"
           >
-            Unreal aestate
+            <label for="nav-input">
+              <a href="#unreal-aestate"> Unreal aestate </a>
+            </label>
           </li>
           <li
-            class="[&.active]:text-c-pink hover:text-c-pink group-[.active]/header:hover:text-c-yellow text-end"
+            data-title="lore"
+            class="[&.active]:text-c-pink hover:text-c-pink group-[.active]/header:hover:text-c-yellow text-end cursor-pointer md:mr-1"
           >
-            Lore
+            <a href="#lore"> Lore </a>
           </li>
           <li
-            class="[&.active]:text-c-pink hover:text-c-pink group-[.active]/header:hover:text-c-yellow text-end"
+            data-title="dnae"
+            class="[&.active]:text-c-pink hover:text-c-pink group-[.active]/header:hover:text-c-yellow text-end cursor-pointer md:mr-1"
           >
-            Dnae
+            <a href="#dnae"> Dnae </a>
           </li>
           <li
-            class="[&.active]:text-c-pink hover:text-c-pink group-[.active]/header:hover:text-c-yellow text-end"
+            data-title="the-quaest"
+            class="[&.active]:text-c-pink hover:text-c-pink group-[.active]/header:hover:text-c-yellow text-end cursor-pointer md:mr-1"
           >
-            The quaest
+            <a href="#the-quaest"> The quaest </a>
           </li>
           <li
-            class="[&.active]:text-c-pink hover:text-c-pink group-[.active]/header:hover:text-c-yellow text-end"
+            data-title="team"
+            class="[&.active]:text-c-pink hover:text-c-pink group-[.active]/header:hover:text-c-yellow text-end cursor-pointer md:mr-1"
           >
-            Team
+            <a href="#team"> Team </a>
           </li>
+          <li class="hidden md:block cursor-default">|</li>
           <li
-            class="text-start hover:text-c-pink group-[.active]/header:hover:text-c-yellow text-xl"
+            class="text-start hover:text-c-pink group-[.active]/header:hover:text-c-yellow text-xl cursor-pointer md:mr-1"
           >
             <i class="fa-brands fa-twitter"></i>
           </li>
           <li
-            class="text-start hover:text-c-pink group-[.active]/header:hover:text-c-yellow text-xl"
+            class="text-start hover:text-c-pink group-[.active]/header:hover:text-c-yellow text-xl cursor-pointer md:mr-1"
           >
             <i class="fa-brands fa-discord"></i>
           </li>
         </ul>
+
         <!-- end nav -->
       </div>
     </header>
     <!-- END HEADER BOTTOM -->
-
+    <!-- NAV LEFT -->
+    <nav>
+      <ul
+        data-title="navbar-line"
+        class="fixed top-0 left-0 bottom-0 w-16 z-10 mb-24 justify-center hidden md:flex flex-col gap-10 items-center"
+      >
+        <li class="px-1 group">
+          <a
+            href="#unreal-aestate"
+            data-title="unreal-aestate"
+            class="bg-white h-10 block w-[2px] rounded-full [&.active]:bg-c-pink [&.active]:h-20 transition-all active group-hover:w-[6px] active"
+          ></a>
+        </li>
+        <li class="px-2 group">
+          <a
+            href="#lore"
+            data-title="lore"
+            class="bg-white h-10 block w-[2px] rounded-full [&.active]:bg-c-pink [&.active]:h-20 transition-all group-hover:w-[6px]"
+          ></a>
+        </li>
+        <li class="px-2 group">
+          <a
+            href="#dnae"
+            data-title="dnae"
+            class="bg-white h-10 block w-[2px] rounded-full [&.active]:bg-c-pink [&.active]:h-20 transition-all group-hover:w-[6px]"
+          ></a>
+        </li>
+        <li class="px-2 group">
+          <a
+            href="#the-quaest"
+            data-title="the-quaest"
+            class="bg-white h-10 block w-[2px] rounded-full [&.active]:bg-c-pink [&.active]:h-20 transition-all group-hover:w-[6px]"
+          ></a>
+        </li>
+        <li class="px-2 group">
+          <a
+            href="#team"
+            data-title="team"
+            class="bg-white h-10 block w-[2px] rounded-full [&.active]:bg-c-pink [&.active]:h-20 transition-all group-hover:w-[6px]"
+          ></a>
+        </li>
+      </ul>
+    </nav>
+    <!-- END NAV LEFT -->
     <!-- WELCOME -->
-    <section>
+    <section id="unreal-aestate">
       <div
-        class="w-full bg-cover h-fit pb-24 bg-bottom relative overflow-hidden"
+        id="page-welcome"
+        class="w-full bg-cover h-fit pb-24 bg-bottom relative overflow-hidden lg:h-screen"
         style="background-image: url(../public/img/bg/hero-background.webp)"
       >
-        <div class="flex justify-center pt-12 relative">
+        <div class="flex justify-center pt-12 relative lg:h-full items-center">
           <!-- video -->
           <div class="relative">
-            <div class="relative z-[1]">
+            <div class="relative z-[2]">
               <!-- sticker top -->
               <div class="absolute top-0 w-full">
                 <div
                   class="w-6/12 float-right translate-x-1/2 -translate-y-1/2"
                 >
-                  <img src="../public/img/stiker/hero-top-right.webp" alt="" />
+                  <img
+                    src="../public/img/stiker/hero-top-right.webp"
+                    alt=""
+                    class="animate-rotate3d-y"
+                  />
                 </div>
                 <div
                   class="w-6/12 float-left -translate-x-1/2 -translate-y-1/2 -rotate-[25deg]"
                 >
                   <img
+                    class="animate-show-center"
                     src="../public/img/stiker/hero-bottom-left.webp"
                     alt=""
                   />
@@ -184,58 +244,26 @@
                     <i class="fa-solid fa-pause"></i>
                   </span>
                 </button>
-                <script>
-                  const video = document.getElementById("video-welcome");
-                  const playBtn = document.getElementById(
-                    "action-video-welcome-btn"
-                  );
-                  const volumeBtn = document.getElementById(
-                    "volume-video-welcome-btn"
-                  );
-                  const reloadBtn = document.getElementById(
-                    "reload-video-welcome-btn"
-                  );
-
-                  playBtn.onclick = (e) => {
-                    const action = playBtn.dataset.action;
-                    playBtn.dataset.action =
-                      action === "pause" ? "play" : "pause";
-                    action === "pause" ? video.play() : video.pause();
-                  };
-
-                  reloadBtn.onclick = (e) => {
-                    video.currentTime = 0;
-                    video.play();
-                    playBtn.dataset.action = "play";
-                  };
-
-                  volumeBtn.onclick = () => {
-                    const currentStatusVolume = volumeBtn.dataset.volume;
-                    video.volume = currentStatusVolume === "off" ? 1 : 0;
-                    volumeBtn.dataset.volume =
-                      currentStatusVolume === "off" ? "on" : "off";
-                  };
-                </script>
               </div>
               <!-- end action video -->
             </div>
 
             <!-- sticker bottom -->
-            <div class="absolute bottom-0 w-full">
+            <div class="absolute bottom-0 w-full z-[1] h-20">
               <div
-                class="w-6/12 absolute bottom-0 right-0 translate-x-2/3 -rotate-45 translate-y-1/2"
+                class="w-6/12 absolute bottom-0 right-0 translate-x-3/4 -rotate-45 translate-y-1/2"
               >
                 <img
-                  class=""
+                  class="animate-rotate3d-x"
                   src="../public/img/stiker/hero-bottom-left-cozy.webp"
                   alt=""
                 />
               </div>
               <div
-                class="w-4/12 absolute bottom-0 left-0 -translate-x-1/2 translate-y-1/2"
+                class="w-4/12 absolute bottom-0 left-0 -translate-x-1/2 translate-y-1/2 lg:w-2/12 lg:-translate-x-[80%] lg:translate-y-1/3"
               >
                 <img
-                  class=""
+                  class="animate-show-center-vibrate"
                   src="../public/img/stiker/hero-bottom-right-top.webp"
                   alt=""
                 />
@@ -247,13 +275,16 @@
         </div>
       </div>
       <!-- about -->
-      <div class="w-full relative">
+      <div class="w-full relative pb-20">
         <!-- sticker end bottom -->
         <div
           class="absolute top-0 left-0 w-full -translate-y-1/2 overflow-hidden"
         >
           <div class="w-5/12 float-right translate-x-1/4">
             <img
+              data-effect="rotateX"
+              data-effect-duration="800"
+              data-effect-delay="300"
               class="h-full object-contain origin-center"
               src="../public/img/stiker/hero-bottom-right-bottom.webp"
               alt=""
@@ -261,38 +292,90 @@
           </div>
           <div class="w-4/12 float-left -translate-x-1/3 translate-y-1/2">
             <img
-              class="h-full object-contain origin-center"
+              data-effect="rotateX"
+              data-effect-duration="800"
+              data-effect-delay="100"
+              class="h-full object-contain origin-center zzz"
               src="../public/img/stiker/hero-bottom-left-cozy.webp"
               alt=""
             />
           </div>
         </div>
         <!-- end sticker end bottom  -->
-
-        <div class="w-full absolute -z-10 -translate-y-[20%]">
-          <img class="" src="../public/img/bg/yellow-bg.webp" alt="" />
-        </div>
         <div class="relative">
           <!-- text welcome -->
-          <div class="-mt-8 top-0 lg:px-[10vw] z-10 container mx-auto px-4">
+          <div
+            class="-mt-8 top-0 lg:px-[10vw] lg:pt-10 z-10 container mx-auto px-4"
+          >
             <div class="">
-              <img src="../public/img/wellcome/welcome-text.webp" alt="" />
+              <img
+                src="../public/img/wellcome/welcome-text.webp"
+                alt=""
+                data-effect="move-b"
+                data-effect-duration="800"
+                data-effect-delay="0"
+              />
             </div>
             <div class="">
-              <img src="../public/img/wellcome/welcome-text-2.webp" alt="" />
+              <img
+                src="../public/img/wellcome/welcome-text-2.webp"
+                alt=""
+                data-effect="move-b"
+                data-effect-duration="800"
+                data-effect-delay="0"
+              />
             </div>
           </div>
           <!-- end text welcome -->
+          <!-- sticker paragraph -->
+          <div
+            class="absolute w-full h-full left-0 top-0 -z-[1] overflow-hidden"
+          >
+            <div class="absolute left-0 top-1/3 w-[20vw] animate-horBounce-1s">
+              <img
+                src="../public/img/wellcome/welcome-left-center.webp"
+                \
+                data-effect="show-zoom"
+                data-effect-duration="1000"
+                data-effect-delay="1000"
+                alt=""
+              />
+            </div>
+            <div
+              class="absolute right-0 top-1/3 w-[20vw] animate-horBounce-700ms"
+            >
+              <img
+                src="../public/img/wellcome/welcome.webp"
+                data-effect="show"
+                data-effect-duration="800"
+                data-effect-delay="800"
+                alt=""
+              />
+            </div>
+            <div class="absolute -right-64 top-0 -z-[1]">
+              <img
+                data-effect="show"
+                data-effect-duration="500"
+                data-effect-delay="200"
+                src="../public/img/wellcome/welcome-right.webp"
+                alt=""
+              />
+            </div>
+          </div>
+          <!-- end sticker paragraph -->
 
           <!-- paragraph welcome -->
           <div
-            class="container mx-auto px-4 text-center text-c-pink text-sm mt-12 mb-24"
+            class="container relative mx-auto px-4 text-center text-c-pink text-sm mt-12 mb-24 md:text-xl lg:mt-10 lg:mb-40 lg:px-[15vw]"
+            data-effect="move-b"
+            data-effect-duration="800"
+            data-effect-delay="400"
           >
             <p class="mb-2">
               The first
-              <span class="font-bold"
-                >interdimensional digital collectibles</span
-              >
+              <span class="font-bold">
+                interdimensional digital collectibles
+              </span>
               coming from the parallel world of
               <span class="font-bold">Aeterna.</span>
             </p>
@@ -303,32 +386,39 @@
           </div>
           <!-- end paragraph welcome -->
           <!-- parallax -->
-          <div class="w-full h-20 relative mb-44">
-            <div class="absolute left-1/2 h-full w-40 -translate-x-1/2 pt-20">
+          <div class="w-full relative">
+            <div
+              class="h-40 w-40 md:w-72 md:h-72 md:pt-0 lg:w-96 lg:h-96 mx-auto"
+            >
               <img
+                data-effect="show-zoom"
+                data-effect-duration="1000"
+                data-effect-delay="600"
                 src="../public/img/stiker/parallax-circle-front.webp"
                 alt=""
               />
             </div>
-            <div class="absolute left-[6%] animate-horBounce-1">
+            <div class="absolute left-[6%] animate-horBounce-1 top-0">
               <img
-                class="w-20 h-20 rotate-[30deg]"
+                class="w-20 h-20 rotate-[30deg] md:h-40 md:w-40"
                 src="../public/img/stiker/parallax-rock-1.webp"
                 alt=""
               />
             </div>
 
-            <div class="absolute left-[40%] animate-verBounce-1">
+            <div class="absolute left-[40%] animate-verBounce-1 md:top-40">
               <img
-                class="w-24 h-24 rotate-[130deg]"
+                class="w-24 h-24 rotate-[130deg] md:h-48 md:w-48"
                 src="../public/img/stiker/parallax-rock-1.webp"
                 alt=""
               />
             </div>
 
-            <div class="absolute left-[35%] top-10 animate-verBounce-2">
+            <div
+              class="absolute left-[35%] top-10 animate-verBounce-2 md:top-52"
+            >
               <img
-                class="w-14 h-14 rotate"
+                class="w-14 h-14 rotate md:h-28 md:w-28"
                 src="../public/img/stiker/parallax-rock-1.webp"
                 alt=""
               />
@@ -336,19 +426,28 @@
 
             <div class="absolute left-[60%] -bottom-5 animate-horBounce-2">
               <img
-                class="w-14 h-14 mt-10"
+                class="w-14 h-14 mt-10 md:h-28 md:w-28"
                 src="../public/img/stiker/parallax-rock-1.webp"
                 alt=""
               />
             </div>
 
-            <div class="absolute left-[80%] animate-rotateBounce">
+            <div class="absolute top-0 left-[80%] animate-rotateBounce">
               <img
-                class="w-10 h-10"
+                class="w-10 h-10 md:h-20 md:w-20"
                 src="../public/img/stiker/parallax-rock-1.webp"
                 alt=""
               />
             </div>
+            <!-- bg yellow -->
+            <div class="w-full absolute -z-10 translate-y-[5%] bottom-0">
+              <img
+                class="w-full"
+                src="../public/img/bg/yellow-bg.webp"
+                alt=""
+              />
+            </div>
+            <!-- end bg yellow -->
           </div>
           <!-- end parallax -->
         </div>
@@ -358,11 +457,17 @@
     <!-- END WELCOME -->
 
     <!-- CHAPTER -->
-    <section>
-      <div class="px-4">
+    <section id="lore">
+      <div class="px-4 md:px-32 mt-10 lg:h-screen">
         <!-- HEAD CHAPTER -->
         <div class="flex items-center mb-6">
-          <span class="text-3xl font-bold">LORE</span>
+          <span
+            class="text-3xl font-bold mb-6 lg:text-[3vw] lg:mb-10"
+            data-effect="move-t"
+            data-effect-duration="1000"
+            data-effect-delay="600"
+            >LORE</span
+          >
           <div class="ml-7">
             <div class="flex gap-6 items-center opacity-80">
               <label
@@ -381,18 +486,26 @@
           </div>
         </div>
         <!-- END HEAD CHAPTER -->
-        <!-- CONTENT CHAPTER -->
-        <div class="w-full mb-6 relative">
+        <div class="w-full mb-6 relative lg:flex lg:flex-row-reverse">
           <!-- action move chapter -->
           <div
             class="absolute top-0 right-0 flex text-2xl gap-6 mt-2 mr-4 text-stone-300 opacity-50 z-[1]"
             id="move-chapter-wrapper"
           >
             <button data-direction="left" class="flex items-center">
-              <i class="fa-solid fa-angles-left"></i>
+              <!-- <i class="fa-solid fa-angles-left"></i> -->
+              <img
+                src="../public/img/chapter/chapter-arrow-left.svg"
+                alt=""
+                class="rotate-90"
+              />
             </button>
             <button data-direction="right" class="flex items-center">
-              <i class="fa-solid fa-angles-right"></i>
+              <img
+                src="../public/img/chapter/chapter-arrow-left.svg"
+                alt=""
+                class="-rotate-90"
+              />
             </button>
           </div>
           <!-- end action move chapter -->
@@ -421,13 +534,20 @@
             class="peer/chapter3"
             hidden
           />
-          <!-- chapter 1 -->
-          <div class="h-[584px] overflow-hidden group/chapter">
+          <!-- CONTENT CHAPTER -->
+          <div
+            class="h-[584px] overflow-hidden group/chapter lg:w-1/2 lg:px-10 text-sm lg:text-[1vw] lg:h-[800px] leading-normal"
+          >
             <div
-              class="peer-checked/chapter1:group-[]/chapter:translate-y-0 peer-checked/chapter2:group-[]/chapter:-translate-y-[584px] peer-checked/chapter3:group-[]/chapter:-translate-y-[1168px] transition-all duration-1000"
+              class="h-full peer-checked/chapter1:group-[]/chapter:translate-y-0 peer-checked/chapter2:group-[]/chapter:-translate-y-[100%] peer-checked/chapter3:group-[]/chapter:-translate-y-[200%] transition-all duration-1000"
             >
-              <div class="text-sm h-[584px]">
-                <h4 class="text-4xl font-bold mb-6">Chapter 1</h4>
+              <!-- chapter 1 -->
+              <div class="h-full lg:pt-5">
+                <h4
+                  class="text-4xl font-bold mb-6 md:text-2xl lg:text-[5vw] lg:mb-10"
+                >
+                  Chapter 1
+                </h4>
                 <div>
                   <p>
                     <b>380 million years ago</b>, Earth experienced the first
@@ -462,8 +582,12 @@
               </div>
               <!-- end chapter 1 -->
               <!-- chapter 2   -->
-              <div class="text-sm h-[584px]">
-                <h4 class="text-4xl font-bold mb-6">Chapter 2</h4>
+              <div class="h-full lg:pt-5">
+                <h4
+                  class="text-4xl font-bold mb-6 md:text-2xl lg:text-[5vw] lg:mb-10"
+                >
+                  Chapter 2
+                </h4>
                 <div class="">
                   <p>
                     <b>Interdimensional voyage came at a high price.</b>,
@@ -495,8 +619,12 @@
               <!-- end chapter 2 -->
 
               <!-- chapter 3 -->
-              <div class="text-sm h-[584px]">
-                <h4 class="text-4xl font-bold mb-6">Chapter 3</h4>
+              <div class="h-full lg:pt-5">
+                <h4
+                  class="text-4xl font-bold mb-6 md:text-2xl lg:text-[5vw] lg:mb-10"
+                >
+                  Chapter 3
+                </h4>
                 <div>
                   <p>
                     <b
@@ -526,7 +654,13 @@
             </div>
           </div>
           <!-- END CONTENT CHAPTER -->
-          <div class="group/image relative">
+          <!-- IMAGE CHAPTER -->
+          <div
+            class="group/image relative md:hidden lg:block lg:w-1/2"
+            data-effect="move-l"
+            data-effect-duration="500"
+            data-effect-delay="0"
+          >
             <div
               class="hidden opacity-0 peer-checked/chapter1:group-[]/image:opacity-100 peer-checked/chapter1:group-[]/image:block transition-[opacity] duration-1000"
             >
@@ -543,51 +677,61 @@
               <img src="../public/img/chapter/Chapter3.webp" alt="" />
             </div>
           </div>
-          <!-- IMAGE CHAPTER -->
+          <!-- END IMAGE CHAPTER -->
         </div>
-        <!-- END IMAGE CHAPTER -->
-      </div>
-      <script>
-        const moveChapterWrapper = document.getElementById(
-          "move-chapter-wrapper"
-        );
-        const inputsChapter = document.querySelectorAll("input[name=chapter]");
-        let currentChapter = 1;
-        const NUMBER_CHAPTER = 3;
-
-        moveChapterWrapper.onclick = (e) => {
-          const moveBtn = e.target.closest("button");
-          if (!moveBtn) {
-            return;
-          }
-          const direction = moveBtn.dataset.direction;
-          currentChapter += direction === "right" ? 1 : -1;
-          currentChapter =
-            ((currentChapter - 1 + NUMBER_CHAPTER) % NUMBER_CHAPTER) + 1;
-          const currentChapterActiveElement = document.querySelector(
-            `input[name='chapter'][data-chapter='${currentChapter}']`
+        <script>
+          const moveChapterWrapper = document.getElementById(
+            "move-chapter-wrapper"
           );
-          document.querySelector(`[for='chapter${currentChapter}']`);
-          document
-            .querySelector(".label-chapter.active")
-            .classList.remove("active");
-          const labelChapterActive = document
-            .querySelector(`[data-label-chapter='${currentChapter}']`)
-            .classList.add("active");
-          currentChapterActiveElement.checked = true;
-        };
-      </script>
+          const inputsChapter = document.querySelectorAll(
+            "input[name=chapter]"
+          );
+          let currentChapter = 1;
+          const NUMBER_CHAPTER = 3;
+
+          moveChapterWrapper.onclick = (e) => {
+            const moveBtn = e.target.closest("button");
+            if (!moveBtn) {
+              return;
+            }
+            const direction = moveBtn.dataset.direction;
+            currentChapter += direction === "right" ? 1 : -1;
+            currentChapter =
+              ((currentChapter - 1 + NUMBER_CHAPTER) % NUMBER_CHAPTER) + 1;
+            const currentChapterActiveElement = document.querySelector(
+              `input[name='chapter'][data-chapter='${currentChapter}']`
+            );
+            document.querySelector(`[for='chapter${currentChapter}']`);
+            document
+              .querySelector(".label-chapter.active")
+              .classList.remove("active");
+            const labelChapterActive = document
+              .querySelector(`[data-label-chapter='${currentChapter}']`)
+              .classList.add("active");
+            currentChapterActiveElement.checked = true;
+          };
+        </script>
+      </div>
     </section>
     <!-- END CHAPTER -->
 
     <!-- COMING SOON  -->
-    <section>
-      <div class="w-full overflow-x-hidden mt-44">
-        <div class="">
+    <section id="dnae">
+      <div
+        class="w-full overflow-x-hidden mt-44 lg:w-11/12 lg:h-screen lg:ml-auto"
+      >
+        <div class="lg:flex h-full">
           <!-- paragraph coming soon -->
-          <div class="pb-10 px-4">
-            <h4 class="text-4xl font-bold mb-6">DNAE: Details and Rarities</h4>
-            <div class="text-sm font-extralight">
+          <div
+            class="pb-10 px-4 lg:pr-20 lg:w-5/12"
+            data-effect="show"
+            data-effect-duration="800"
+            data-effect-delay="500"
+          >
+            <h4 class="text-4xl font-bold mb-6 md:text-[4vw] leading-normal">
+              DNAE: Details and Rarities
+            </h4>
+            <div class="text-sm font-extralight lg:text-[1vw] leading-normal">
               <p class="">
                 Hand-drawn art pieces by David Sossella, HouseHaeds are
                 programmatically generated from 7 different types of buildings
@@ -615,7 +759,12 @@
           </div>
           <!-- end paragraph coming soon -->
           <!-- image coming soon -->
-          <div class="w-full px-12 pt-20 relative">
+          <div
+            class="w-full px-12 pt-20 lg:w-7/12 relative h-full"
+            data-effect="move-r"
+            data-effect-duration="400"
+            data-effect-delay="700"
+          >
             <div
               class="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-bl from-black via-black to-c-pink opacity-30"
             ></div>
@@ -623,37 +772,75 @@
               class="absolute top-0 left-0 right-0 bottom-0 bg-black-op-40 z-10 flex justify-center items-center"
             >
               <div class="uppercase flex flex-col items-center">
-                <span class="text-[5vw] tracking-[0.3rem] font-extralight"
-                  >coming</span
-                >
+                <span class="text-[5vw] tracking-[0.3rem] font-extralight">
+                  coming
+                </span>
                 <span class="text-[6vw] font-bold tracking-wide">soon</span>
               </div>
             </div>
-            <div class="">
-              <div class="opacity-30 relative">
-                <img src="../public/img/Reveal.webp" alt="" />
-                <div class="absolute bottom-0 left-0 text-2xl p-8">
-                  <span class="block">*** Hand:</span>
-                  <span class="block">12%</span>
+            <div class="flex mx-auto h-full">
+              <div class="flex-1">
+                <div class="max-w-xs mx-auto">
+                  <div class="opacity-30 relative">
+                    <img src="../public/img/Reveal.webp" alt="" />
+                    <div class="absolute bottom-0 left-0 text-2xl p-8">
+                      <span class="block">*** Hand:</span>
+                      <span class="block">12%</span>
+                    </div>
+                  </div>
+                  <div class="flex flex-col px-6">
+                    <span class="my-4">Other in this NFT</span>
+                    <hr />
+                    <ul class="mt-4 mb-8 flex flex-wrap">
+                      <li class="flex flex-col my-2 w-1/2">
+                        <span>Body:</span>
+                        <span>9%</span>
+                      </li>
+                      <li class="flex flex-col my-2 w-1/2">
+                        <span>Building:</span>
+                        <span>36%</span>
+                      </li>
+                      <li class="flex flex-col my-2 w-1/2">
+                        <span>Eyes:</span>
+                        <span>58%</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-              <div class="flex flex-col px-6">
-                <span class="my-4">Other in this NFT</span>
-                <hr />
-                <ul class="mt-4 mb-8 flex flex-wrap">
-                  <li class="flex flex-col my-2 w-1/2">
-                    <span>Body:</span>
-                    <span>9%</span>
-                  </li>
-                  <li class="flex flex-col my-2 w-1/2">
-                    <span>Building:</span>
-                    <span>36%</span>
-                  </li>
-                  <li class="flex flex-col my-2 w-1/2">
-                    <span>Eyes:</span>
-                    <span>58%</span>
-                  </li>
-                </ul>
+              <div
+                class="h-full overflow-hidden w-32 opacity-30 hidden lg:block"
+              >
+                <div class="w-full h-full animate-scroll">
+                  <div
+                    class="w-full h-full bg-repeat-space mb-10"
+                    style="
+                      background-image: url(../public/img/Reveal.webp);
+                      background-size: 100%;
+                    "
+                  ></div>
+                  <div
+                    class="w-full h-full bg-repeat-space mb-10"
+                    style="
+                      background-image: url(../public/img/Reveal.webp);
+                      background-size: 100%;
+                    "
+                  ></div>
+                  <div
+                    class="w-full h-full bg-repeat-space mb-10"
+                    style="
+                      background-image: url(../public/img/Reveal.webp);
+                      background-size: 100%;
+                    "
+                  ></div>
+                  <div
+                    class="w-full h-full bg-repeat-space"
+                    style="
+                      background-image: url(../public/img/Reveal.webp);
+                      background-size: 100%;
+                    "
+                  ></div>
+                </div>
               </div>
             </div>
           </div>
@@ -664,17 +851,40 @@
     <!-- END COMING SOON  -->
 
     <!-- PANNER COMING SOON -->
-    <section>
+    <section id="the-quaest">
       <div
-        class="w-full bg-cover mt-20 bg-top flex flex-col items-center"
+        class="w-full bg-cover mt-20 flex flex-col items-center lg:h-[calc(100vh_+_100px)] bg-bottom relative"
         style="background-image: url(../public/img/bg/game-bg.webp)"
       >
-        <div class="mb-10">
-          <img src="../public/img/bg/game-bg-2.webp" alt="" />
+        <div
+          class="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-b from-c-black via-transpare to-transparent -z-10"
+        ></div>
+        <div class="flex w-full">
+          <div class="w-3/12 h-full flex justify-end items-end">
+            <img
+              src="../public/img/game-arrow-left.webp"
+              alt=""
+              data-effect="move-l"
+              data-effect-duration="400"
+              data-effect-delay="700"
+            />
+          </div>
+          <div class="mb-10 w-full lg:w-6/12">
+            <img src="../public/img/bg/game-bg-2.webp" alt="" />
+          </div>
+          <div class="w-3/12 h-full flex justify-start items-end">
+            <img
+              src="../public/img/game-arrow-right.webp"
+              alt=""
+              data-effect="move-r"
+              data-effect-duration="400"
+              data-effect-delay="700"
+            />
+          </div>
         </div>
         <div class="my-10">
           <button
-            class="z-[2] relative group/comingsoon-btn hover:text-c-pink hover:font-bold"
+            class="z-[2] relative group/comingsoon-btn hover:text-c-pink hover:font-bold animate-vibrate-2"
           >
             <div
               class="absolute top-4 -left-4 -z-[1] group-hover/comingsoon-btn:top-0 group-hover/comingsoon-btn:left-0 transition-all duration-500 group-hover/comingsoon-btn:opacity-0"
@@ -695,15 +905,20 @@
     <!-- END PANNER COMING SOON -->
 
     <!-- TEAM -->
-    <section>
-      <div class="mt-20 p-4">
+    <section id="team">
+      <div class="mt-20 p-4 container mx-auto">
         <span class="text-6xl font-bold">Team</span>
         <!-- FOUNDERS -->
         <div class="">
           <span class="text-2xl font-bold uppercase mt-10 mb-4 block"
             >Founders</span
           >
-          <div class="w-full flex overflow-x-auto">
+          <div
+            class="w-full flex overflow-x-auto"
+            data-effect="move-rt"
+            data-effect-duration="600"
+            data-effect-delay="200"
+          >
             <!-- team item -->
             <div class="flex flex-col items-center p-4 shrink-0">
               <div class="w-24 h-24 rounded-full">
@@ -740,7 +955,12 @@
           <span class="text-2xl font-bold uppercase mt-10 mb-4 block"
             >Creative team</span
           >
-          <div class="w-full flex overflow-x-auto">
+          <div
+            class="w-full flex overflow-x-auto"
+            data-effect="move-rt"
+            data-effect-duration="600"
+            data-effect-delay="200"
+          >
             <!-- team item -->
             <div class="flex flex-col items-center p-4 shrink-0">
               <div class="w-24 h-24 rounded-full">
@@ -811,7 +1031,12 @@
           <span class="text-2xl font-bold uppercase mt-10 mb-4 block"
             >Development team</span
           >
-          <div class="w-full flex overflow-x-auto">
+          <div
+            class="w-full flex overflow-x-auto"
+            data-effect="move-rt"
+            data-effect-duration="600"
+            data-effect-delay="200"
+          >
             <!-- team item -->
             <div class="flex flex-col items-center p-4 shrink-0">
               <div class="w-24 h-24 rounded-full">
@@ -865,7 +1090,12 @@
           <span class="text-2xl font-bold uppercase mt-10 mb-4 block"
             >Copyist</span
           >
-          <div class="w-full flex overflow-x-auto">
+          <div
+            class="w-full flex overflow-x-auto"
+            data-effect="move-rt"
+            data-effect-duration="600"
+            data-effect-delay="200"
+          >
             <!-- team item -->
             <div class="flex flex-col items-center p-4 shrink-0">
               <div class="w-24 h-24 rounded-full">
@@ -900,40 +1130,175 @@
           />
         </div>
         <!-- end footer top -->
-        <!-- footer middle -->
-        <div class="p-4">
-          <div class="">
-            <img class="" src="../public/img/logo.webp" alt="" />
-            <ul class="flex gap-10 text-xl mt-10">
-              <li class="hover:text-c-pink">
-                <i class="fa-brands fa-twitter"></i>
-              </li>
-              <li class="hover:text-c-pink">
-                <i class="fa-brands fa-discord"></i>
-              </li>
-            </ul>
-          </div>
-          <div class="">
-            <img src="../public/img/footer-hand.webp" alt="" />
-          </div>
-        </div>
-        <!-- end footer middle -->
-        <!-- footer bottom -->
-        <div class="p-4">
-          <hr class="border-stone-400" />
-          <div class="">
-            <div class="flex justify-between py-4">
-              <span class="hover:text-c-pink">Privacy Policy</span>
-              <span class="hover:text-c-pink pr-4">Terms of Use</span>
+        <div class="container mx-auto">
+          <!-- footer middle -->
+          <div
+            class="p-4 w-11/12 mx-auto md:flex md:justify-between md:items-end"
+          >
+            <div class="md:w-1/2">
+              <img class="" src="../public/img/logo.webp" alt="" />
+              <ul class="flex gap-10 text-xl mt-10">
+                <li class="hover:text-c-pink">
+                  <i class="fa-brands fa-twitter"></i>
+                </li>
+                <li class="hover:text-c-pink">
+                  <i class="fa-brands fa-discord"></i>
+                </li>
+              </ul>
             </div>
-            <div class="">
-              <span>©Aeterna Labs, Inc. All right reserved</span>
+            <div class="md:w-1/2">
+              <img
+                class="mx-auto"
+                src="../public/img/footer-hand.webp"
+                alt=""
+              />
+            </div>
+            <!-- end footer middle -->
+          </div>
+          <!-- footer bottom -->
+          <div class="p-4 w-11/12 mx-auto" id="footer-end">
+            <hr class="border-stone-400" />
+            <div class="lg:flex lg:justify-between lg:items-center">
+              <div class="flex justify-between py-4 gap-24">
+                <span class="hover:text-c-pink cursor-not-allowed"
+                  >Privacy Policy</span
+                >
+                <span class="hover:text-c-pink pr-4 cursor-not-allowed"
+                  >Terms of Use</span
+                >
+              </div>
+              <div class="">
+                <span>©Aeterna Labs, Inc. All right reserved</span>
+              </div>
             </div>
           </div>
+          <!-- end footer bottom -->
         </div>
-        <!-- end footer bottom -->
       </div>
     </footer>
     <!-- END FOOTER -->
+    <script>
+      const header = document.getElementById("header");
+      const video = document.getElementById("video-welcome");
+      const playBtn = document.getElementById("action-video-welcome-btn");
+      const volumeBtn = document.getElementById("volume-video-welcome-btn");
+      const reloadBtn = document.getElementById("reload-video-welcome-btn");
+
+      handleVideo();
+      hiddenHeaderWhenEnd();
+      changeThemeHeaderWhenOutWelcome();
+      activeNavbar();
+
+      // ACTION VIDEO
+      function handleVideo() {
+        playBtn.onclick = actionVideo;
+        reloadBtn.onclick = (e) => {
+          video.currentTime = 0;
+          video.play();
+          playBtn.dataset.action = "play";
+        };
+
+        volumeBtn.onclick = () => {
+          const currentStatusVolume = volumeBtn.dataset.volume;
+          video.volume = currentStatusVolume === "off" ? 1 : 0;
+          volumeBtn.dataset.volume =
+            currentStatusVolume === "off" ? "on" : "off";
+        };
+
+        function actionVideo() {
+          const action = playBtn.dataset.action;
+          playBtn.dataset.action = action === "pause" ? "play" : "pause";
+          action === "pause" ? video.play() : video.pause();
+        }
+      }
+      // END ACTION VIDEO
+
+      // HANDLE INTERSECTION
+      function hiddenHeaderWhenEnd() {
+        const targetElement = document.querySelector("#footer-end");
+        function handle(entry) {
+          header.classList.toggle("!hidden", entry.isIntersecting);
+        }
+        intersection({ element: targetElement, callback: handle });
+      }
+      function changeThemeHeaderWhenOutWelcome() {
+        const pageWelcome = document.querySelector("#page-welcome");
+        function handle(entry) {
+          header.classList.toggle("active", entry.isIntersecting);
+          if (!entry.isIntersecting) {
+            video.pause();
+            playBtn.dataset.action = "pause";
+          }
+        }
+        intersection({ element: pageWelcome, callback: handle });
+      }
+      function activeNavbar() {
+        const sections = document.querySelectorAll("section");
+        const navbar = document.querySelector("[data-title='navbar']");
+        const navbarLine = document.querySelector("[data-title='navbar-line']");
+
+        function handle(entry) {
+          if (entry.target.id === "lore") {
+            if (entry.isIntersecting) {
+              console.log("lore show");
+            } else {
+              console.log("lore hidden");
+            }
+          }
+
+          if (entry.isIntersecting) {
+            navbar
+              .querySelector(`[data-title].active`)
+              ?.classList.remove("active");
+            navbar
+              .querySelector(`[data-title='${entry.target.id}']`)
+              .classList.add("active");
+
+            navbarLine
+              .querySelector(`[data-title].active`)
+              ?.classList.remove("active");
+            navbarLine
+              .querySelector(`[data-title='${entry.target.id}']`)
+              .classList.add("active");
+          } else {
+            navbar
+              .querySelector(`[data-title='${entry.target.id}']`)
+              .classList.remove("active");
+            navbarLine
+              .querySelector(`[data-title='${entry.target.id}']`)
+              .classList.remove("active");
+          }
+        }
+
+        sections.forEach((section) => {
+          intersection({ element: section, callback: handle });
+        });
+      }
+
+      // handle effect show
+      const elementEffects = document.querySelectorAll("[data-effect]");
+      function handleEffect(entry) {
+        entry.target.style.transitionDuration =
+          entry.target.dataset.effectDuration + "ms";
+        entry.target.style.transitionDelay =
+          entry.target.dataset.effectDelay + "ms";
+        entry.target.classList.toggle("show", entry.isIntersecting);
+      }
+
+      elementEffects.forEach((element) => {
+        intersection({ element, callback: handleEffect });
+      });
+      //end handle effect show
+
+      function intersection({ element, callback }) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            callback(entry);
+          });
+        });
+        observer.observe(element);
+      }
+      // AND HANDLE INTERSECTION
+    </script>
   </body>
 </html>
