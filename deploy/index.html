@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>House</title>
+    <link rel="stylesheet" href="./public/css/style.css" />
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="./public/img/logo-nav.webp"
+      type="image/x-icon"
+    />
+    <!-- end favicon -->
+    <!-- icon -->
+    <link rel="stylesheet" href="./public/font/fontawesome-free-6.4.0-web/css/all.min.css">
+    <!-- end icon -->
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Trispace:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- end font -->
+  </head>
+  <body>
+    <!-- HEADER BOTTOM -->
+    <header>
+      <div
+        id="header"
+        class="min-h-[90px] w-full fixed left-0 bottom-0 z-50 bg-white text-c-black [&.active]:text-white [&.active]:bg-c-pink flex justify-between items-center px-5 group/header md:flex md:justify-between active"
+      >
+        <a class="" href="#">
+          <img
+            class="w-1/2 hidden group-[.active]/header:block"
+            src="./public/img/logo-nav.webp"
+            alt=""
+          />
+          <img
+            class="w-1/2 group-[.active]/header:hidden"
+            src="./public/img/logo-hh.webp"
+            alt=""
+          />
+        </a>
+        <!-- nav -->
+        <input
+          class="peer/nav-input"
+          type="checkbox"
+          name=""
+          id="nav-input"
+          hidden
+        />
+
+        <label
+          for="nav-input"
+          class="text-sm peer-checked/nav-input:rotate-180 transition-transform md:hidden"
+        >
+          <i class="fa-solid fa-angle-up"></i>
+        </label>
+        <label
+          for="nav-input"
+          class="fixed left-0 right-0 bottom-0 top-0 z-[-10] hidden peer-checked/nav-input:block"
+        ></label>
+        <ul
+          data-title="navbar"
+          class="absolute bottom-full left-0 w-full flex-col gap-3 uppercase py-7 px-5 font-bold bg-white group-[.active]/header:bg-gradient-to-t from-c-pink to-white hidden peer-checked/nav-input:flex md:flex md:flex-row md:relative md:from-transparent md:to-transparent md:bg-transparent md:justify-end"
+        >
+          <li
+            data-title="unreal-aestate"
+            class="[&.active]:text-c-yellow hover:text-c-pink group-[.active]/header:hover:text-c-yellow text-end cursor-pointer md:mr-1"
+          >
+            <label for="nav-input">
+              <a href="#unreal-aestate"> Unreal aestate </a>
+            </label>
+          </li>
+          <li
+            data-title="lore"
+            class="[&.active]:text-c-pink hover:text-c-pink group-[.active]/header:hover:text-c-yellow text-end cursor-pointer md:mr-1"
+          >
+            <a href="#lore"> Lore </a>
+          </li>
+          <li
+            data-title="dnae"
+            class="[&.active]:text-c-pink hover:text-c-pink group-[.active]/header:hover:text-c-yellow text-end cursor-pointer md:mr-1"
+          >
+            <a href="#dnae"> Dnae </a>
+          </li>
+          <li
+            data-title="the-quaest"
+            class="[&.active]:text-c-pink hover:text-c-pink group-[.active]/header:hover:text-c-yellow text-end cursor-pointer md:mr-1"
+          >
+            <a href="#the-quaest"> The quaest </a>
+          </li>
+          <li
+            data-title="team"
+            class="[&.active]:text-c-pink hover:text-c-pink group-[.active]/header:hover:text-c-yellow text-end cursor-pointer md:mr-1"
+          >
+            <a href="#team"> Team </a>
+          </li>
+          <li class="hidden md:block cursor-default">|</li>
+          <li
+            class="text-start hover:text-c-pink group-[.active]/header:hover:text-c-yellow text-xl cursor-pointer md:mr-1"
+          >
+            <span class="w-5 h-5 flex justify-center items-center">
+              <i class="fa-brands fa-twitter"></i>
+            </span>
+          </li>
+          <li
+            class="text-start hover:text-c-pink group-[.active]/header:hover:text-c-yellow text-xl cursor-pointer md:mr-1"
+          >
+            <span class="w-5 h-5 flex justify-center items-center">
+              <i class="fa-brands fa-discord"></i>
+            </span>
+          </li>
+          <li
+            class="text-start hover:text-c-pink group-[.active]/header:hover:text-c-yellow text-xl cursor-pointer md:mr-1"
+          >
+            <span class="w-5 h-5 flex justify-center items-center">
+              <i class="fa-brands fa-pagelines"></i>
+            </span>
+          </li>
+        </ul>
+
+        <!-- end nav -->
+      </div>
+    </header>
+    <!-- END HEADER BOTTOM -->
+    <!-- NAV LEFT -->
+    <nav>
+      <ul
+        data-title="navbar-line"
+        class="fixed top-0 left-0 bottom-0 w-16 z-10 mb-24 justify-center hidden md:flex flex-col gap-10 items-center"
+      >
+        <li class="px-1 group">
+          <a
+            href="#unreal-aestate"
+            data-title="unreal-aestate"
+            class="bg-white h-10 block w-[2px] rounded-full [&.active]:bg-c-pink [&.active]:h-20 transition-all active group-hover:w-[6px] active"
+          ></a>
+        </li>
+        <li class="px-2 group">
+          <a
+            href="#lore"
+            data-title="lore"
+            class="bg-white h-10 block w-[2px] rounded-full [&.active]:bg-c-pink [&.active]:h-20 transition-all group-hover:w-[6px]"
+          ></a>
+        </li>
+        <li class="px-2 group">
+          <a
+            href="#dnae"
+            data-title="dnae"
+            class="bg-white h-10 block w-[2px] rounded-full [&.active]:bg-c-pink [&.active]:h-20 transition-all group-hover:w-[6px]"
+          ></a>
+        </li>
+        <li class="px-2 group">
+          <a
+            href="#the-quaest"
+            data-title="the-quaest"
+            class="bg-white h-10 block w-[2px] rounded-full [&.active]:bg-c-pink [&.active]:h-20 transition-all group-hover:w-[6px]"
+          ></a>
+        </li>
+        <li class="px-2 group">
+          <a
+            href="#team"
+            data-title="team"
+            class="bg-white h-10 block w-[2px] rounded-full [&.active]:bg-c-pink [&.active]:h-20 transition-all group-hover:w-[6px]"
+          ></a>
+        </li>
+      </ul>
+    </nav>
+    <!-- END NAV LEFT -->
+    <!-- WELCOME -->
+    <section id="unreal-aestate">
+      <div
+        id="page-welcome"
+        class="w-full bg-cover h-fit pb-24 bg-bottom relative overflow-hidden lg:h-screen"
+        style="background-image: url(./public/img/bg/hero-background.webp)"
+      >
+        <div
+          class="flex justify-center pt-12 relative lg:h-full items-center /home/mvibot/Truong/project/Tailwind/house/src/index.html"
+        >
+          <!-- video -->
+          <div class="relative">
+            <div class="relative z-[2]">
+              <!-- sticker top -->
+              <div class="absolute top-0 w-full">
+                <div
+                  class="w-6/12 float-right translate-x-1/2 -translate-y-1/2"
+                >
+                  <img
+                    src="./public/img/stiker/hero-top-right.webp"
+                    alt=""
+                    class="animate-rotate3d-y"
+                  />
+                </div>
+                <div
+                  class="w-6/12 float-left -translate-x-1/2 -translate-y-1/2 -rotate-[25deg]"
+                >
+                  <img
+                    class="animate-show-center"
+                    src="./public/img/stiker/hero-bottom-left.webp"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <!-- end sticker top -->
+              <video
+                class="w-[60vw] rounded-3xl shadow-video min-h-[20vw] bg-c-pink"
+                id="video-welcome"
+                src="./public/video/welcome.mp4"
+              ></video>
+              <!-- action video -->
+              <div
+                class="absolute left-0 text-sm bottom-3 px-5 w-full flex justify-between"
+              >
+                <div class="flex gap-4">
+                  <button
+                    class="active:rotate-[90deg] active:text-c-pink transition-transform"
+                    id="reload-video-welcome-btn"
+                  >
+                    <i class="fa-solid fa-rotate-right"></i>
+                  </button>
+
+                  <button
+                    data-volume="on"
+                    class="group/volume flex justify-center items-center hover:text-c-pink"
+                    id="volume-video-welcome-btn"
+                  >
+                    <span class="hidden group-data-[volume='on']/volume:block">
+                      <i class="fa-solid fa-volume-high"></i>
+                    </span>
+                    <span class="block group-data-[volume='on']/volume:hidden">
+                      <i class="fa-solid fa-volume-xmark"></i>
+                    </span>
+                  </button>
+                </div>
+                <button
+                  data-action="pause"
+                  id="action-video-welcome-btn"
+                  class="group/play-btn text-cente w-5 h-5 flex justify-center items-center"
+                >
+                  <span
+                    class="block group-data-[action='play']/play-btn:hidden"
+                  >
+                    <i class="fa-solid fa-play"></i>
+                  </span>
+                  <span
+                    class="hidden group-data-[action='play']/play-btn:block group-data-[action='play']/play-btn:text-c-pink"
+                  >
+                    <i class="fa-solid fa-pause"></i>
+                  </span>
+                </button>
+              </div>
+              <!-- end action video -->
+            </div>
+
+            <!-- sticker bottom -->
+            <div class="absolute bottom-0 w-full z-[1] h-20">
+              <div
+                class="w-6/12 absolute bottom-0 right-0 translate-x-3/4 -rotate-45 translate-y-1/2"
+              >
+                <img
+                  class="animate-rotate3d-x"
+                  src="./public/img/stiker/hero-bottom-left-cozy.webp"
+                  alt=""
+                />
+              </div>
+              <div
+                class="w-4/12 absolute bottom-0 left-0 -translate-x-1/2 translate-y-1/2 lg:w-2/12 lg:-translate-x-[80%] lg:translate-y-1/3"
+              >
+                <img
+                  class="animate-show-center-vibrate"
+                  src="./public/img/stiker/hero-bottom-right-top.webp"
+                  alt=""
+                />
+              </div>
+            </div>
+            <!-- end sticker bottom -->
+          </div>
+          <!-- end video -->
+        </div>
+      </div>
+      <!-- about -->
+      <div class="w-full relative pb-20">
+        <!-- sticker end bottom -->
+        <div
+          class="absolute top-0 left-0 w-full -translate-y-1/2 overflow-hidden"
+        >
+          <div class="w-5/12 float-right translate-x-1/4">
+            <img
+              data-effect="rotateX"
+              data-effect-duration="800"
+              data-effect-delay="300"
+              class="h-full object-contain origin-center"
+              src="./public/img/stiker/hero-bottom-right-bottom.webp"
+              alt=""
+            />
+          </div>
+          <div class="w-4/12 float-left -translate-x-1/3 translate-y-1/2">
+            <img
+              data-effect="rotateX"
+              data-effect-duration="800"
+              data-effect-delay="100"
+              class="h-full object-contain origin-center zzz"
+              src="./public/img/stiker/hero-bottom-left-cozy.webp"
+              alt=""
+            />
+          </div>
+        </div>
+        <!-- end sticker end bottom  -->
+        <div class="relative">
+          <!-- text welcome -->
+          <div
+            class="-mt-8 top-0 lg:px-[10vw] lg:pt-10 z-10 container mx-auto px-4"
+          >
+            <div class="">
+              <img
+                src="./public/img/wellcome/welcome-text.webp"
+                alt=""
+                data-effect="move-b"
+                data-effect-duration="800"
+                data-effect-delay="0"
+              />
+            </div>
+            <div class="">
+              <img
+                src="./public/img/wellcome/welcome-text-2.webp"
+                alt=""
+                data-effect="move-b"
+                data-effect-duration="800"
+                data-effect-delay="0"
+              />
+            </div>
+          </div>
+          <!-- end text welcome -->
+          <!-- sticker paragraph -->
+          <div
+            class="absolute w-full h-full left-0 top-0 -z-[1] overflow-hidden"
+          >
+            <div class="absolute left-0 top-1/3 w-[20vw] animate-horBounce-1s">
+              <img
+                src="./public/img/wellcome/welcome-left-center.webp"
+                \
+                data-effect="show-zoom"
+                data-effect-duration="1000"
+                data-effect-delay="1000"
+                alt=""
+              />
+            </div>
+            <div
+              class="absolute right-0 top-1/3 w-[20vw] animate-horBounce-700ms"
+            >
+              <img
+                src="./public/img/wellcome/welcome.webp"
+                data-effect="show"
+                data-effect-duration="800"
+                data-effect-delay="800"
+                alt=""
+              />
+            </div>
+            <div class="absolute -right-64 top-0 -z-[1]">
+              <img
+                data-effect="show"
+                data-effect-duration="500"
+                data-effect-delay="200"
+                src="./public/img/wellcome/welcome-right.webp"
+                alt=""
+              />
+            </div>
+          </div>
+          <!-- end sticker paragraph -->
+
+          <!-- paragraph welcome -->
+          <div
+            class="container relative mx-auto px-4 text-center text-c-pink text-sm mt-12 mb-24 md:text-xl lg:mt-10 lg:mb-40 lg:px-[15vw]"
+            data-effect="move-b"
+            data-effect-duration="800"
+            data-effect-delay="400"
+          >
+            <p class="mb-2">
+              The first
+              <span class="font-bold">
+                interdimensional digital collectibles
+              </span>
+              coming from the parallel world of
+              <span class="font-bold">Aeterna.</span>
+            </p>
+            <p>
+              Become an Aeterna Landlord and take part in the greatest
+              multiverse adventure ever.
+            </p>
+          </div>
+          <!-- end paragraph welcome -->
+          <!-- parallax -->
+          <div class="w-full relative">
+            <div
+              class="h-40 w-40 md:w-72 md:h-72 md:pt-0 lg:w-96 lg:h-96 mx-auto"
+            >
+              <img
+                data-effect="show-zoom"
+                data-effect-duration="1000"
+                data-effect-delay="600"
+                src="./public/img/stiker/parallax-circle-front.webp"
+                alt=""
+              />
+            </div>
+            <div class="absolute left-[6%] animate-horBounce-1 top-0">
+              <img
+                class="w-20 h-20 rotate-[30deg] md:h-40 md:w-40"
+                src="./public/img/stiker/parallax-rock-1.webp"
+                alt=""
+              />
+            </div>
+
+            <div class="absolute left-[40%] animate-verBounce-1 md:top-40">
+              <img
+                class="w-24 h-24 rotate-[130deg] md:h-48 md:w-48"
+                src="./public/img/stiker/parallax-rock-1.webp"
+                alt=""
+              />
+            </div>
+
+            <div
+              class="absolute left-[35%] top-10 animate-verBounce-2 md:top-52"
+            >
+              <img
+                class="w-14 h-14 rotate md:h-28 md:w-28"
+                src="./public/img/stiker/parallax-rock-1.webp"
+                alt=""
+              />
+            </div>
+
+            <div class="absolute left-[60%] -bottom-5 animate-horBounce-2">
+              <img
+                class="w-14 h-14 mt-10 md:h-28 md:w-28"
+                src="./public/img/stiker/parallax-rock-1.webp"
+                alt=""
+              />
+            </div>
+
+            <div class="absolute top-0 left-[80%] animate-rotateBounce">
+              <img
+                class="w-10 h-10 md:h-20 md:w-20"
+                src="./public/img/stiker/parallax-rock-1.webp"
+                alt=""
+              />
+            </div>
+            <!-- bg yellow -->
+            <div class="w-full absolute -z-10 translate-y-[5%] bottom-0">
+              <img class="w-full" src="./public/img/bg/yellow-bg.webp" alt="" />
+            </div>
+            <!-- end bg yellow -->
+          </div>
+          <!-- end parallax -->
+        </div>
+      </div>
+      <!-- end about -->
+    </section>
+    <!-- END WELCOME -->
+    <!-- CHAPTER -->
+    <section id="lore">
+      <div class="px-4 md:px-32 mt-10 lg:h-screen">
+        <!-- HEAD CHAPTER -->
+        <div class="flex items-center mb-6">
+          <span
+            class="text-3xl font-bold mb-6 lg:text-[3vw] lg:mb-10"
+            data-effect="move-t"
+            data-effect-duration="1000"
+            data-effect-delay="600"
+            >LORE</span
+          >
+          <div class="ml-7">
+            <div class="flex gap-6 items-center opacity-80">
+              <label
+                data-label-chapter="1"
+                class="label-chapter block [&.active]:bg-c-pink [&.active]:w-2 [&.active]:h-2 w-1 h-1 active bg-stone-500 rounded-full transition-all origin-center"
+              ></label>
+              <label
+                data-label-chapter="2"
+                class="label-chapter block [&.active]:bg-c-pink [&.active]:w-2 [&.active]:h-2 w-1 h-1 bg-stone-500 rounded-full transition-all origin-center"
+              ></label>
+              <label
+                data-label-chapter="3"
+                class="label-chapter block [&.active]:bg-c-pink [&.active]:w-2 [&.active]:h-2 w-1 h-1 bg-stone-500 rounded-full transition-all origin-center"
+              ></label>
+            </div>
+          </div>
+        </div>
+        <!-- END HEAD CHAPTER -->
+        <div class="w-full mb-6 relative lg:flex lg:flex-row-reverse">
+          <!-- action move chapter -->
+          <div
+            class="absolute top-0 right-0 flex text-2xl gap-6 mt-2 mr-4 text-stone-300 opacity-50 z-[1]"
+            id="move-chapter-wrapper"
+          >
+            <button data-direction="left" class="flex items-center">
+              <!-- <i class="fa-solid fa-angles-left"></i> -->
+              <img
+                src="./public/img/chapter/chapter-arrow-left.svg"
+                alt=""
+                class="rotate-90"
+              />
+            </button>
+            <button data-direction="right" class="flex items-center">
+              <img
+                src="./public/img/chapter/chapter-arrow-left.svg"
+                alt=""
+                class="-rotate-90"
+              />
+            </button>
+          </div>
+          <!-- end action move chapter -->
+          <input
+            name="chapter"
+            id="chapter1"
+            type="radio"
+            data-chapter="1"
+            class="peer/chapter1"
+            checked
+            hidden
+          />
+          <input
+            name="chapter"
+            id="chapter2"
+            type="radio"
+            data-chapter="2"
+            class="peer/chapter2"
+            hidden
+          />
+          <input
+            name="chapter"
+            id="chapter3"
+            type="radio"
+            data-chapter="3"
+            class="peer/chapter3"
+            hidden
+          />
+          <!-- CONTENT CHAPTER -->
+          <div
+            class="h-[620px] overflow-hidden group/chapter lg:w-1/2 lg:px-10 text-sm lg:text-[1vw] lg:h-[800px] leading-normal"
+          >
+            <div
+              class="h-full peer-checked/chapter1:group-[]/chapter:translate-y-0 peer-checked/chapter2:group-[]/chapter:-translate-y-[100%] peer-checked/chapter3:group-[]/chapter:-translate-y-[200%] transition-all duration-1000"
+            >
+              <!-- chapter 1 -->
+              <div class="h-full lg:pt-5">
+                <h4
+                  class="text-4xl font-bold mb-6 py-2 md:text-2xl lg:text-[5vw] lg:mb-10"
+                >
+                  Chapter 1
+                </h4>
+                <div>
+                  <p>
+                    <b>380 million years ago</b>, Earth experienced the first
+                    interdimensional split in history. Following a major
+                    sliding-doors event, a parallel world was born. A planet
+                    which was very similar, but also completely different, from
+                    its human twin. Its name was <b>Aeterna</b>.
+                  </p>
+                  <br />
+                  <p>
+                    <b>
+                      It all began with a primordial fish making love with an
+                      underwater cave
+                    </b>
+                    <br />
+                    On this parallel world, our progenitors did not evolve
+                    towards hominids, but astonishing combos of humans, building
+                    and trees. They eventually became <b>Househaeds</b>,
+                    intelligent creatures with a strong bond with nature and a
+                    deep sense of community.
+                  </p>
+                  <br />
+                  <p>
+                    <b>Their history is a mess</b>. Following the bizarre laws
+                    of interdimensional science, what happened in our world
+                    happened also on Aeterna, but in a mashed up way. Through
+                    bad and good times, Househaeds never waged war among each
+                    other. All the disputes are settled by the most prominent
+                    members of their society.
+                  </p>
+                </div>
+              </div>
+              <!-- end chapter 1 -->
+              <!-- chapter 2   -->
+              <div class="h-full lg:pt-5">
+                <h4
+                  class="text-4xl font-bold mb-6 py-2 md:text-2xl lg:text-[5vw] lg:mb-10"
+                >
+                  Chapter 2
+                </h4>
+                <div class="">
+                  <p>
+                    <b>Interdimensional voyage came at a high price.</b>,
+                    <br />
+                    In the human year 1492 AD, as Earth was experiencing the
+                    discovery of America, on Aeterna a Househaed called Moebius
+                    found a way to reach parallel worlds. But before Househaeds
+                    managed to get full control on the process, many of them,
+                    although warned by
+                    <b>the Elders</b>, fell trapped in a space-time distortion
+                    called <b>The Limbo</b>, a dead-end recess in the structure
+                    of the multiverse.
+                  </p>
+                  <br />
+                  <p>
+                    Since then, nobody has managed to set them free. But there
+                    is a hope. And this hope is humanity.
+                  </p>
+                  <br />
+                  <p>
+                    <b>Today,</b> <br />Unreal Aestate, the first
+                    interdimensional real estate company in the multiverse, has
+                    come to offer a unique chance to buy Househaeds on the
+                    parallel world of Aeterna. And to involve humanity in its
+                    first interdimensional adventure ever.
+                  </p>
+                </div>
+              </div>
+              <!-- end chapter 2 -->
+
+              <!-- chapter 3 -->
+              <div class="h-full lg:pt-5">
+                <h4
+                  class="text-4xl font-bold mb-6 py-2 md:text-2xl lg:text-[5vw] lg:mb-10"
+                >
+                  Chapter 3
+                </h4>
+                <div>
+                  <p>
+                    <b
+                      >For humans, this is not only a big opportunity in the
+                      artistic digital collectibles market, but also a way to
+                      change Aeterna’s fate.
+                    </b>
+                    <br />As Aeterna scientists recently found, humans share the
+                    same genetic heritage of Househaeds. This means that
+                    together, Househaeds and humans can finally have a chance to
+                    release the long-trapped Househaeds from Limbo.
+                  </p>
+                  <br />
+                  <p>
+                    The scientific process behind this is very confusing and
+                    boring, as it belongs to interdimensional studies. But to
+                    make it immediate, funny and rewarding, Unreal Aestate has
+                    turned it into
+                    <b
+                      >The Quaest, a legendary mission every Househaed’s owner
+                      is entitled to join.</b
+                    >
+                  </p>
+                </div>
+              </div>
+              <!-- end chapter 3 -->
+            </div>
+          </div>
+          <!-- END CONTENT CHAPTER -->
+          <!-- IMAGE CHAPTER -->
+          <div
+            class="group/image relative md:hidden lg:block lg:w-1/2"
+            data-effect="move-l"
+            data-effect-duration="500"
+            data-effect-delay="0"
+          >
+            <div
+              class="hidden opacity-0 w-10/12 peer-checked/chapter1:group-[]/image:opacity-100 peer-checked/chapter1:group-[]/image:block transition-[opacity] duration-1000"
+            >
+              <img src="./public/img/chapter/Chapter1.webp" alt="" />
+            </div>
+            <div
+              class="hidden opacity-0 w-10/12 peer-checked/chapter2:group-[]/image:opacity-100 peer-checked/chapter2:group-[]/image:block transition-[opacity] duration-1000"
+            >
+              <img src="./public/img/chapter/Chapter2.webp" alt="" />
+            </div>
+            <div
+              class="hidden opacity-0 w-10/12 peer-checked/chapter3:group-[]/image:opacity-100 peer-checked/chapter3:group-[]/image:block transition-[opacity] duration-1000"
+            >
+              <img src="./public/img/chapter/Chapter3.webp" alt="" />
+            </div>
+          </div>
+          <!-- END IMAGE CHAPTER -->
+        </div>
+        <script>
+          const moveChapterWrapper = document.getElementById(
+            "move-chapter-wrapper"
+          );
+          const inputsChapter = document.querySelectorAll(
+            "input[name=chapter]"
+          );
+          let currentChapter = 1;
+          const NUMBER_CHAPTER = 3;
+
+          moveChapterWrapper.onclick = (e) => {
+            const moveBtn = e.target.closest("button");
+            if (!moveBtn) {
+              return;
+            }
+            const direction = moveBtn.dataset.direction;
+            currentChapter += direction === "right" ? 1 : -1;
+            currentChapter =
+              ((currentChapter - 1 + NUMBER_CHAPTER) % NUMBER_CHAPTER) + 1;
+            const currentChapterActiveElement = document.querySelector(
+              `input[name='chapter'][data-chapter='${currentChapter}']`
+            );
+            document.querySelector(`[for='chapter${currentChapter}']`);
+            document
+              .querySelector(".label-chapter.active")
+              .classList.remove("active");
+            const labelChapterActive = document
+              .querySelector(`[data-label-chapter='${currentChapter}']`)
+              .classList.add("active");
+            currentChapterActiveElement.checked = true;
+          };
+        </script>
+      </div>
+    </section>
+    <!-- END CHAPTER -->
+    <!-- COMING SOON  -->
+    <section id="dnae">
+      <div
+        class="w-full overflow-x-hidden mt-44 lg:w-11/12 lg:h-screen lg:ml-auto"
+      >
+        <div class="lg:flex h-full">
+          <!-- paragraph coming soon -->
+          <div
+            class="pb-10 px-4 lg:pr-20 lg:w-5/12"
+            data-effect="show"
+            data-effect-duration="800"
+            data-effect-delay="500"
+          >
+            <h4 class="text-4xl font-bold mb-6 md:text-[4vw] leading-normal">
+              DNAE: Details and Rarities
+            </h4>
+            <div class="text-sm font-extralight lg:text-[1vw] leading-normal">
+              <p class="">
+                Hand-drawn art pieces by David Sossella, HouseHaeds are
+                programmatically generated from 7 different types of buildings
+                (Houses), including color palette as well as structural
+                variations within each building style, for a total of 19
+                different base characters. On top of that, there are over 220
+                unique traits distributed on 9 separate layers for a total
+                amount of potential combinations in the order of hundreds of
+                billions. Literally.
+              </p>
+              <br />
+              <p class="">
+                The result is a very diverse collection with so many levels of
+                collectability, where each NFT not only has its own personality,
+                but it also truly looks and feels like a one of a kind.
+              </p>
+              <br />
+              <p class="">
+                The rarity of their features reflects the seven steps of their
+                society: Common|Uncommon|Rare|Epic|Legendary|Mythic|1:1. Some of
+                the rarest Househaeds are still trapped in Limbo, making them a
+                real endangered species.
+              </p>
+            </div>
+          </div>
+          <!-- end paragraph coming soon -->
+          <!-- image coming soon -->
+          <div
+            class="w-full px-12 pt-20 lg:w-7/12 relative h-full"
+            data-effect="move-r"
+            data-effect-duration="400"
+            data-effect-delay="700"
+          >
+            <div
+              class="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-bl from-black via-black to-c-pink opacity-30"
+            ></div>
+            <div
+              class="absolute top-0 left-0 right-0 bottom-0 bg-black-op-40 z-10 flex justify-center items-center"
+            >
+              <div class="uppercase flex flex-col items-center">
+                <span class="text-[5vw] tracking-[0.3rem] font-extralight">
+                  coming
+                </span>
+                <span class="text-[6vw] font-bold tracking-wide">soon</span>
+              </div>
+            </div>
+            <div class="flex mx-auto h-full">
+              <div class="flex-1">
+                <div class="max-w-xs mx-auto">
+                  <div class="opacity-30 relative">
+                    <img src="./public/img/Reveal.webp" alt="" />
+                    <div class="absolute bottom-0 left-0 text-2xl p-8">
+                      <span class="block">*** Hand:</span>
+                      <span class="block">12%</span>
+                    </div>
+                  </div>
+                  <div class="flex flex-col px-6">
+                    <span class="my-4">Other in this NFT</span>
+                    <hr />
+                    <ul class="mt-4 mb-8 flex flex-wrap">
+                      <li class="flex flex-col my-2 w-1/2">
+                        <span>Body:</span>
+                        <span>9%</span>
+                      </li>
+                      <li class="flex flex-col my-2 w-1/2">
+                        <span>Building:</span>
+                        <span>36%</span>
+                      </li>
+                      <li class="flex flex-col my-2 w-1/2">
+                        <span>Eyes:</span>
+                        <span>58%</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="h-full overflow-hidden w-32 opacity-30 hidden lg:block"
+              >
+                <div class="w-full h-full animate-scroll">
+                  <div
+                    class="w-full h-full bg-repeat-space mb-10"
+                    style="
+                      background-image: url(./public/img/Reveal.webp);
+                      background-size: 100%;
+                    "
+                  ></div>
+                  <div
+                    class="w-full h-full bg-repeat-space mb-10"
+                    style="
+                      background-image: url(./public/img/Reveal.webp);
+                      background-size: 100%;
+                    "
+                  ></div>
+                  <div
+                    class="w-full h-full bg-repeat-space mb-10"
+                    style="
+                      background-image: url(./public/img/Reveal.webp);
+                      background-size: 100%;
+                    "
+                  ></div>
+                  <div
+                    class="w-full h-full bg-repeat-space"
+                    style="
+                      background-image: url(./public/img/Reveal.webp);
+                      background-size: 100%;
+                    "
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end image coming soon -->
+        </div>
+      </div>
+    </section>
+    <!-- END COMING SOON  -->
+    <!-- PANNER COMING SOON -->
+    <section id="the-quaest">
+      <div
+        class="w-full bg-cover mt-20 flex flex-col items-center lg:h-[calc(100vh_+_100px)] bg-bottom relative overflow-hidden"
+        style="background-image: url(./public/img/bg/game-bg.webp)"
+      >
+        <div
+          class="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-b from-c-black via-transpare to-transparent -z-10"
+        ></div>
+        <div class="flex w-full">
+          <div class="w-3/12 h-full flex justify-end items-end">
+            <img
+              src="./public/img/game-arrow-left.webp"
+              alt=""
+              data-effect="move-l"
+              data-effect-duration="400"
+              data-effect-delay="700"
+            />
+          </div>
+          <div class="mb-10 w-full lg:w-6/12">
+            <img src="./public/img/bg/game-bg-2.webp" alt="" />
+          </div>
+          <div class="w-3/12 h-full flex justify-start items-end">
+            <img
+              src="./public/img/game-arrow-right.webp"
+              alt=""
+              data-effect="move-r"
+              data-effect-duration="400"
+              data-effect-delay="700"
+            />
+          </div>
+        </div>
+        <div class="my-10">
+          <button
+            class="z-[2] relative group/comingsoon-btn hover:text-c-pink hover:font-bold animate-vibrate-2"
+          >
+            <div
+              class="absolute top-4 -left-4 -z-[1] group-hover/comingsoon-btn:top-0 group-hover/comingsoon-btn:left-0 transition-all duration-500 group-hover/comingsoon-btn:opacity-0"
+            >
+              <img src="./public/img/comingsoon/btn-bg-back.svg" alt="" />
+            </div>
+            <span
+              class="absolute block left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+              >Coming Soon</span
+            >
+            <div class="">
+              <img src="./public/img/comingsoon/btn-bg.svg" alt="" />
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- END PANNER COMING SOON -->
+    <!-- TEAM -->
+    <section id="team">
+      <div class="mt-20 p-4 container mx-auto">
+        <span class="text-6xl font-bold">Team</span>
+        <!-- FOUNDERS -->
+        <div class="">
+          <span class="text-2xl font-bold uppercase mt-10 mb-4 block"
+            >Founders</span
+          >
+          <div
+            class="w-full flex overflow-x-auto"
+            data-effect="move-rt"
+            data-effect-duration="600"
+            data-effect-delay="200"
+          >
+            <!-- team item -->
+            <div class="flex flex-col items-center p-4 shrink-0">
+              <div class="w-24 h-24 rounded-full">
+                <img
+                  class="w-full h-full object-cover rounded-full"
+                  src="./public/img/team/Sappy.jpg"
+                  alt=""
+                />
+              </div>
+              <span class="block uppercase mb-2 mt-4 font-bold">James</span>
+              <span class="block capitalize font-extralight">
+                Business strategy
+              </span>
+            </div>
+            <!-- end team item -->
+            <!-- team item -->
+            <div class="flex flex-col items-center p-4 shrink-0">
+              <div class="w-24 h-24 rounded-full">
+                <img
+                  class="w-full h-full object-cover rounded-full"
+                  src="./public/img/team/Martini.jpg"
+                  alt=""
+                />
+              </div>
+              <span class="block uppercase mb-2 mt-4 font-bold">Macca</span>
+              <span class="block capitalize font-extralight"> Operations </span>
+            </div>
+            <!-- end team item -->
+          </div>
+        </div>
+        <!-- END FOUNDERS -->
+        <!-- CREATIVE TEAM  -->
+        <div class="">
+          <span class="text-2xl font-bold uppercase mt-10 mb-4 block"
+            >Creative team</span
+          >
+          <div
+            class="w-full flex overflow-x-auto"
+            data-effect="move-rt"
+            data-effect-duration="600"
+            data-effect-delay="200"
+          >
+            <!-- team item -->
+            <div class="flex flex-col items-center p-4 shrink-0">
+              <div class="w-24 h-24 rounded-full">
+                <img
+                  class="w-full h-full object-cover rounded-full"
+                  src="./public/img/team/Paulo.jpg"
+                  alt=""
+                />
+              </div>
+              <span class="block uppercase mb-2 mt-4 font-bold">Lio</span>
+              <span class="block capitalize font-extralight">
+                creative dir.
+              </span>
+            </div>
+            <!-- end team item -->
+            <!-- team item -->
+            <div class="flex flex-col items-center p-4 shrink-0">
+              <div class="w-24 h-24 rounded-full">
+                <img
+                  class="w-full h-full object-cover rounded-full"
+                  src="./public/img/team/Martini.jpg"
+                  alt=""
+                />
+              </div>
+              <span class="block uppercase mb-2 mt-4 font-bold">Jimmy</span>
+              <span class="block capitalize font-extralight">
+                Create dir.
+              </span>
+            </div>
+            <!-- end team item -->
+
+            <!-- team item -->
+            <div class="flex flex-col items-center p-4 shrink-0">
+              <div class="w-24 h-24 rounded-full">
+                <img
+                  class="w-full h-full object-cover rounded-full"
+                  src="./public/img/team/Paulo.jpg"
+                  alt=""
+                />
+              </div>
+              <span class="block uppercase mb-2 mt-4 font-bold">David</span>
+              <span class="block capitalize font-extralight">
+                Lead Illustrator
+              </span>
+            </div>
+            <!-- end team item -->
+            <!-- team item -->
+            <div class="flex flex-col items-center p-4 shrink-0">
+              <div class="w-24 h-24 rounded-full">
+                <img
+                  class="w-full h-full object-cover rounded-full"
+                  src="./public/img/team/Grim.jpg"
+                  alt=""
+                />
+              </div>
+              <span class="block uppercase mb-2 mt-4 font-bold">Sara</span>
+              <span class="block capitalize font-extralight">
+                Illustrator
+              </span>
+            </div>
+            <!-- end team item -->
+          </div>
+        </div>
+        <!-- END CREATIVE TEAM -->
+
+        <!-- DEVELOPMENT TEAM  -->
+        <div class="">
+          <span class="text-2xl font-bold uppercase mt-10 mb-4 block"
+            >Development team</span
+          >
+          <div
+            class="w-full flex overflow-x-auto"
+            data-effect="move-rt"
+            data-effect-duration="600"
+            data-effect-delay="200"
+          >
+            <!-- team item -->
+            <div class="flex flex-col items-center p-4 shrink-0">
+              <div class="w-24 h-24 rounded-full">
+                <img
+                  class="w-full h-full object-cover rounded-full"
+                  src="./public/img/team/Sappy.jpg"
+                  alt=""
+                />
+              </div>
+              <span class="block uppercase mb-2 mt-4 font-bold">Antis</span>
+              <span class="block capitalize font-extralight"> Lead dev. </span>
+            </div>
+            <!-- end team item -->
+            <!-- team item -->
+            <div class="flex flex-col items-center p-4 shrink-0">
+              <div class="w-24 h-24 rounded-full">
+                <img
+                  class="w-full h-full object-cover rounded-full"
+                  src="./public/img/team/Grim.jpg"
+                  alt=""
+                />
+              </div>
+              <span class="block uppercase mb-2 mt-4 font-bold">Jimmy</span>
+              <span class="block capitalize font-extralight">
+                Development
+              </span>
+            </div>
+            <!-- end team item -->
+
+            <!-- team item -->
+            <div class="flex flex-col items-center p-4 shrink-0">
+              <div class="w-24 h-24 rounded-full">
+                <img
+                  class="w-full h-full object-cover rounded-full"
+                  src="./public/img/team/Paulo.jpg"
+                  alt=""
+                />
+              </div>
+              <span class="block uppercase mb-2 mt-4 font-bold">David</span>
+              <span class="block capitalize font-extralight">
+                Development
+              </span>
+            </div>
+            <!-- end team item -->
+          </div>
+        </div>
+        <!-- END CREATIVE TEAM -->
+
+        <!-- DEVELOPMENT TEAM  -->
+        <div class="">
+          <span class="text-2xl font-bold uppercase mt-10 mb-4 block"
+            >Copyist</span
+          >
+          <div
+            class="w-full flex overflow-x-auto"
+            data-effect="move-rt"
+            data-effect-duration="600"
+            data-effect-delay="200"
+          >
+            <!-- team item -->
+            <div class="flex flex-col items-center p-4 shrink-0">
+              <div class="w-24 h-24 rounded-full">
+                <img
+                  class="w-full h-full object-cover rounded-full"
+                  src="./public/img/team/truong.jpg"
+                  alt=""
+                />
+              </div>
+              <span class="block uppercase mb-2 mt-4 font-bold"
+                >Quoc truong</span
+              >
+              <span class="block capitalize font-extralight">Copyist </span>
+            </div>
+            <!-- end team item -->
+          </div>
+        </div>
+        <!-- END CREATIVE TEAM -->
+      </div>
+    </section>
+    <!-- END TEAM -->
+    <!-- FOOTER -->
+    <footer>
+      <div class="w-full mt-20">
+        <!-- footer top -->
+        <div class="mb- h-72 w-full">
+          <img
+            class="w-full h-full"
+            src="./public/img/footer-top.webp"
+            alt=""
+          />
+        </div>
+        <!-- end footer top -->
+        <div class="container mx-auto">
+          <!-- footer middle -->
+          <div
+            class="p-4 w-11/12 mx-auto md:flex md:justify-between md:items-end"
+          >
+            <div class="md:w-1/2">
+              <img class="" src="./public/img/logo.webp" alt="" />
+              <ul class="flex gap-10 text-xl mt-10">
+                <li class="hover:text-c-pink">
+                  <i class="fa-brands fa-twitter"></i>
+                </li>
+                <li class="hover:text-c-pink">
+                  <i class="fa-brands fa-discord"></i>
+                </li>
+              </ul>
+            </div>
+            <div class="md:w-1/2">
+              <img class="mx-auto" src="./public/img/footer-hand.webp" alt="" />
+            </div>
+            <!-- end footer middle -->
+          </div>
+          <!-- footer bottom -->
+          <div class="p-4 w-11/12 mx-auto" id="footer-end">
+            <hr class="border-stone-400" />
+            <div class="lg:flex lg:justify-between lg:items-center">
+              <div class="flex justify-between py-4 gap-24">
+                <span class="hover:text-c-pink cursor-not-allowed"
+                  >Privacy Policy</span
+                >
+                <span class="hover:text-c-pink pr-4 cursor-not-allowed"
+                  >Terms of Use</span
+                >
+              </div>
+              <div class="">
+                <span>©Aeterna Labs, Inc. All right reserved</span>
+              </div>
+            </div>
+          </div>
+          <!-- end footer bottom -->
+        </div>
+      </div>
+    </footer>
+    <!-- END FOOTER -->
+    <script>
+      const header = document.getElementById("header");
+      const video = document.getElementById("video-welcome");
+      const playBtn = document.getElementById("action-video-welcome-btn");
+      const volumeBtn = document.getElementById("volume-video-welcome-btn");
+      const reloadBtn = document.getElementById("reload-video-welcome-btn");
+
+      handleVideo();
+      hiddenHeaderWhenEnd();
+      changeThemeHeaderWhenOutWelcome();
+      activeNavbar();
+
+      // ACTION VIDEO
+      function handleVideo() {
+        playBtn.onclick = actionVideo;
+        reloadBtn.onclick = (e) => {
+          video.currentTime = 0;
+          video.play();
+          playBtn.dataset.action = "play";
+        };
+
+        volumeBtn.onclick = () => {
+          const currentStatusVolume = volumeBtn.dataset.volume;
+          video.volume = currentStatusVolume === "off" ? 1 : 0;
+          volumeBtn.dataset.volume =
+            currentStatusVolume === "off" ? "on" : "off";
+        };
+
+        function actionVideo() {
+          const action = playBtn.dataset.action;
+          playBtn.dataset.action = action === "pause" ? "play" : "pause";
+          action === "pause" ? video.play() : video.pause();
+        }
+      }
+      // END ACTION VIDEO
+
+      // HANDLE INTERSECTION
+      function hiddenHeaderWhenEnd() {
+        const targetElement = document.querySelector("#footer-end");
+        function handle(entry) {
+          header.classList.toggle("!hidden", entry.isIntersecting);
+        }
+        intersection({ element: targetElement, callback: handle });
+      }
+      function changeThemeHeaderWhenOutWelcome() {
+        const pageWelcome = document.querySelector("#page-welcome");
+        function handle(entry) {
+          header.classList.toggle("active", entry.isIntersecting);
+          if (!entry.isIntersecting) {
+            video.pause();
+            playBtn.dataset.action = "pause";
+          }
+        }
+        intersection({ element: pageWelcome, callback: handle });
+      }
+      function activeNavbar() {
+        const sections = document.querySelectorAll("section");
+        const navbar = document.querySelector("[data-title='navbar']");
+        const navbarLine = document.querySelector("[data-title='navbar-line']");
+
+        function handle(entry) {
+          if (entry.target.id === "lore") {
+            if (entry.isIntersecting) {
+              // console.log("lore show");
+            } else {
+              // console.log("lore hidden");
+            }
+          }
+
+          if (entry.isIntersecting) {
+            navbar
+              .querySelector(`[data-title].active`)
+              ?.classList.remove("active");
+            navbar
+              .querySelector(`[data-title='${entry.target.id}']`)
+              .classList.add("active");
+
+            navbarLine
+              .querySelector(`[data-title].active`)
+              ?.classList.remove("active");
+            navbarLine
+              .querySelector(`[data-title='${entry.target.id}']`)
+              .classList.add("active");
+          } else {
+            navbar
+              .querySelector(`[data-title='${entry.target.id}']`)
+              .classList.remove("active");
+            navbarLine
+              .querySelector(`[data-title='${entry.target.id}']`)
+              .classList.remove("active");
+          }
+        }
+
+        sections.forEach((section) => {
+          intersection({ element: section, callback: handle });
+        });
+      }
+
+      // handle effect show
+      const elementEffects = document.querySelectorAll("[data-effect]");
+      function handleEffect(entry) {
+        entry.target.style.transitionDuration =
+          entry.target.dataset.effectDuration + "ms";
+        entry.target.style.transitionDelay =
+          entry.target.dataset.effectDelay + "ms";
+        entry.target.classList.toggle("show", entry.isIntersecting);
+      }
+
+      elementEffects.forEach((element) => {
+        intersection({ element, callback: handleEffect });
+      });
+      //end handle effect show
+
+      function intersection({ element, callback }) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            callback(entry);
+          });
+        });
+        observer.observe(element);
+      }
+      // AND HANDLE INTERSECTION
+    </script>
+  </body>
+</html>
